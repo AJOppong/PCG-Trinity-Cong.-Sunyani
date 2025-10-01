@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PCG Trinity Congregation</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-pQZxgF0Xj7vX6FhKkO+YFq5Zl8KvgZpY7mkkVh7oP7+I3Zx3qg9e2k9RsmYp3PqX4eJ0m2NZWxkY2Kx9HqQF4g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <style>
     :root {
       --primary: #004080;
@@ -283,68 +285,463 @@
 }
 
 
-    /* ABOUT */
-    .about {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 30px;
-      align-items: center;
-    }
+/* ABOUT SECTION */
+.about-section {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #f9f9f9 0%, #e8f1fc 100%);
+}
 
-    .about img {
-      width: 100%;
-      border-radius: 10px;
-    }
+.about-container {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  max-width: 1200px;
+  margin: auto;
+  flex-wrap: wrap;
+}
 
-    @media(max-width: 768px) {
-      .about {
-        grid-template-columns: 1fr;
-      }
-    }
+/* TEXT */
+.about-text {
+  flex: 1;
+  opacity: 0;
+  transform: translateX(-30px);
+  animation: fadeInLeft 1s ease forwards;
+}
 
-    /* MINISTRIES */
-    .ministries, .departments, .events, .gallery {
-      text-align: center;
-    }
+.about-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #004080;
+}
 
-    .ministry-list, .department-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
+.about-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  color: #222;
+}
 
-    .ministry-card, .department-card {
-      background: var(--white);
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
+/* ICON HIGHLIGHTS */
+.about-values {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
-    .ministry-card:hover, .department-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    }
+.value {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #004080;
+  text-align: center;
+  opacity: 0;
+  animation: fadeInUp 1s ease forwards;
+}
 
-    /* SERMONS */
-    .sermons {
-      text-align: center;
-    }
+.value i {
+  margin-bottom: 10px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
 
-    .sermon-list {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-      max-width: 700px;
-      margin: auto;
-    }
+.value p {
+  font-weight: 600;
+  font-size: 1rem;
+}
 
-    .sermon-item {
-      background: var(--white);
-      padding: 15px;
-      border-left: 5px solid var(--secondary);
-      text-align: left;
-    }
+.value:hover i {
+  transform: scale(1.2);
+  color: #f8b400;
+}
+
+/* IMAGE */
+.about-image {
+  flex: 1;
+  opacity: 0;
+  transform: translateX(30px);
+  animation: fadeInRight 1s ease forwards;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-image img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+}
+
+/* ANIMATIONS */
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .about-container { gap: 30px; }
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .about-text h2 { font-size: 2rem; }
+  .about-text p { font-size: 1rem; }
+  .about-values { justify-content: center; gap: 20px; }
+  .about-text .btn { margin-top: 15px; }
+}
+
+
+/* MINISTRIES SECTION */
+.ministries-section {
+  padding: 80px 20px;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  color: #004080;
+  margin-bottom: 10px;
+}
+
+.section-header p {
+  font-size: 1.1rem;
+  color: #222;
+  margin-bottom: 50px;
+}
+
+.ministry-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.ministry-card {
+  background: #fff;
+  padding: 30px 20px;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.ministry-card i {
+  color: #004080;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.ministry-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #004080;
+}
+
+.ministry-card p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.ministry-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+}
+
+.ministry-card:hover i {
+  color: #f8b400;
+  transform: scale(1.2);
+}
+
+/* Logo inside ministry cards */
+.ministry-card .ministry-logo {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ministry-card:hover .ministry-logo {
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+/* Explore button inside card */
+.ministry-card .btn.primary {
+  margin-top: 15px;
+  padding: 10px 20px;
+  font-size: 0.95rem;
+  border-radius: 25px;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.ministry-card .btn.primary:hover {
+  transform: scale(1.05);
+}
+
+
+/* ANIMATIONS */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* RESPONSIVE */
+@media(max-width: 768px) {
+  .section-header h2 { font-size: 2rem; }
+  .section-header p { font-size: 1rem; margin-bottom: 30px; }
+  .ministry-card { padding: 25px 15px; }
+}
+
+
+/* DEPARTMENTS SECTION */
+/* DEPARTMENTS SECTION */
+.departments-section {
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #e6f0ff, #f9fcff);
+  text-align: center;
+}
+
+.section-header h2 {
+  font-size: 2.8rem;
+  color: #003366;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.section-header p {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 60px;
+}
+
+/* GRID */
+.department-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* CARD STYLE */
+.department-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 30px 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
+}
+
+.department-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at center, rgba(248,180,0,0.15), transparent 70%);
+  transform: scale(0);
+  transition: transform 0.5s ease;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.department-card:hover::before {
+  transform: scale(1);
+}
+
+.department-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+/* LOGO */
+.department-card .logo-wrapper {
+  margin-bottom: 15px;
+  z-index: 1;
+}
+
+.department-card .logo-wrapper img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.department-card:hover .logo-wrapper img {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+/* TEXT */
+.department-card h3 {
+  font-size: 1.35rem;
+  color: #003366;
+  margin-bottom: 10px;
+  z-index: 1;
+}
+
+.department-card p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 15px;
+  z-index: 1;
+}
+
+/* BUTTON */
+.department-card .btn.primary {
+  padding: 10px 22px;
+  border-radius: 25px;
+  font-size: 0.95rem;
+  z-index: 1;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.department-card .btn.primary:hover {
+  transform: scale(1.05);
+  background: #f8b400;
+  color: #003366;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .section-header h2 { font-size:2.2rem; }
+  .section-header p { font-size:1rem; margin-bottom:40px; }
+  .department-card { padding: 25px 15px; }
+}
+
+/* SERMONS SECTION */
+/* SERMONS SECTION */
+.sermons-section {
+  padding: 80px 20px;
+  background: #f0f7ff;
+}
+
+.sermons-section .section-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.sermons-section .section-header h2 {
+  font-size: 2.5rem;
+  color: #004080;
+}
+
+.sermons-section .section-header p {
+  font-size: 1.1rem;
+  color: #333;
+}
+
+/* Sermon list as horizontal rows */
+.sermon-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* Single sermon row */
+.sermon-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sermon-row:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+/* Sermon info */
+.sermon-info h3 {
+  font-size: 1.2rem;
+  color: #004080;
+  margin-bottom: 3px;
+}
+
+.sermon-info .sermon-preacher {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Sermon description */
+.sermon-desc {
+  flex: 1;
+  padding: 0 20px;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Sermon action button */
+.sermon-action .btn.primary {
+  padding: 10px 20px;
+  font-size: 0.95rem;
+  border-radius: 25px;
+  transition: transform 0.3s ease;
+}
+
+.sermon-action .btn.primary:hover {
+  transform: scale(1.05);
+}
+
+/* RESPONSIVE */
+@media(max-width: 1024px) {
+  .sermon-desc {
+    padding: 0 15px;
+  }
+}
+
+@media(max-width: 768px) {
+  .sermon-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 15px 15px;
+  }
+  .sermon-desc {
+    padding: 0;
+  }
+  .sermon-action {
+    align-self: stretch;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
 
     /* EVENTS */
     .event-list {
@@ -406,7 +803,7 @@
   <nav>
     <ul id="nav-links" class="nav-links">
       <li><a href="#about">About</a></li>
-      <li><a href="#ministries">Ministries</a></li>
+      <li><a href="#ministries">Generational Groups</a></li>
       <li><a href="#departments">Departments</a></li>
       <li><a href="#sermons">Sermons</a></li>
       <li><a href="#events">Events</a></li>
@@ -421,9 +818,9 @@
   <section class="hero">
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <h2>Welcome to Presbyterian Church of Ghana</h2>
-      <h3>Trinity Congregation, Tonsuom Estate</h3>
-      <p>Glorifying God • Serving Community • Growing in Faith</p>
+      <h2>Welcome to the Presbyterian Church of Ghana</h2>
+      <h3>Trinity Congregation, Tonsuom Estate - Sunyani</h3>
+      <p>The Family of God • Blessed • Untouchable</p>
       <div class="hero-buttons">
         <a href="#about" class="btn primary">Learn More</a>
         <a href="#sermons" class="btn secondary">Watch Sermons</a>
@@ -432,50 +829,246 @@
     <div class="scroll-down">&#x2193;</div>
   </section>
 
-  <!-- ABOUT -->
-  <section id="about" class="about">
-    <div>
+<!-- ABOUT -->
+<section id="about" class="about-section">
+  <div class="about-container">
+    
+    <!-- TEXT CONTENT -->
+    <div class="about-text">
       <h2>About Us</h2>
       <p>
-        The Presbyterian Church of Ghana, Trinity Congregation, is a Christ-centered community dedicated to worship, service, and evangelism. We aim to nurture faith, build fellowship, and impact society positively.
+        Presbyterian Church of Ghana, Trinity Congregation, is a Christ-centered community devoted to worship, fellowship, and service. Guided by our motto—“Trinity, we are a family of God; Trinity, we are blessed; Trinity, we are untouchable”—we seek to nurture individuals and families in faith, drawing them closer to God through prayer, teaching, and love.
       </p>
+      <p>
+        As a family of believers, we uphold the values of unity, compassion, and holiness, striving to make disciples who live by God’s Word and share His light with the world. At Trinity, we walk together in faith, encourage one another in hope, and celebrate the abundant blessings of God’s grace.
+      </p>
+
+      <!-- ICON HIGHLIGHTS -->
+      <div class="about-values">
+        <div class="value">
+          <i class="fas fa-users fa-3x"></i>
+          <p>Unity</p>
+        </div>
+        <div class="value">
+          <i class="fas fa-hand-holding-heart fa-3x"></i>
+          <p>Compassion</p>
+        </div>
+        <div class="value">
+          <i class="fas fa-cross fa-3x"></i>
+          <p>Holiness</p>
+        </div>
+      </div>
+
+      <a href="#ministries" class="btn primary">Explore Ministries</a>
     </div>
-    <img src="https://source.unsplash.com/600x400/?bible,church" alt="About PCG Trinity">
-  </section>
+
+    <!-- IMAGE -->
+    <div class="about-image">
+      <img src="./images/FB_IMG_1746709039485.jpg" alt="About PCG Trinity">
+    </div>
+
+  </div>
+</section>
+
 
   <!-- MINISTRIES -->
-  <section id="ministries" class="ministries">
+<!-- MINISTRIES -->
+<section id="ministries" class="ministries-section">
+  <div class="section-header">
     <h2>Our Ministries</h2>
-    <div class="ministry-list">
-      <div class="ministry-card"><h3>Children’s Ministry</h3><p>Raising children in the fear of the Lord.</p></div>
-      <div class="ministry-card"><h3>Youth Ministry</h3><p>Building strong Christian leaders of tomorrow.</p></div>
-      <div class="ministry-card"><h3>Men’s Fellowship</h3><p>Empowering men to lead with faith and service.</p></div>
-      <div class="ministry-card"><h3>Women’s Fellowship</h3><p>Encouraging women to grow in faith and service.</p></div>
-    </div>
-  </section>
+    <p>Serving God, nurturing faith, and building community.</p>
+  </div>
 
-  <!-- DEPARTMENTS -->
-  <section id="departments" class="departments">
+  <div class="ministry-list">
+    <div class="ministry-card">
+      <img src="./images/children's service.png" alt="Children's Service Logo" class="ministry-logo">
+      <h3>Children’s Service</h3>
+      <p>Guiding the little ones in faith and love.</p>
+      <a href="" class="btn primary">Explore</a>
+    </div>
+
+    <div class="ministry-card">
+      <img src="./images/jy.jpeg" alt="Junior Youth Logo" class="ministry-logo">
+      <h3>Junior Youth (JY)</h3>
+      <p>Building strong young believers for tomorrow.</p>
+      <a href="" class="btn primary">Explore</a>
+    </div>
+
+    <div class="ministry-card">
+      <img src="./images/ypg 2.png" alt="Young People's Guild Logo" class="ministry-logo">
+      <h3>Young People's Guild (YPG)</h3>
+      <p>Fostering fellowship and growth among youth.</p>
+      <a href="" class="btn primary">Explore</a>
+    </div>
+
+    <div class="ministry-card">
+      <img src="./images/yafs.png" alt="Young Adults Fellowship Logo" class="ministry-logo">
+      <h3>Young Adults Fellowship (YAF)</h3>
+      <p>Encouraging spiritual and social development in young adults.</p>
+      <a href="" class="btn primary">Explore</a>
+    </div>
+
+    <div class="ministry-card">
+      <img src="./images/wfs (1).png" alt="Women's Ministry Logo" class="ministry-logo">
+      <h3>Women's Ministry</h3>
+      <p>Empowering women to grow in faith and service.</p>
+      <a href="" class="btn primary">Explore</a>
+    </div>
+
+    <div class="ministry-card">
+      <img src="./images/Mens Fellowship (1).png" alt="Men's Ministry Logo" class="ministry-logo">
+      <h3>Men's Ministry</h3>
+      <p>Equipping men to lead with faith and integrity.</p>
+      <a href="" class="btn primary">Explore</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- DEPARTMENTS -->
+<section id="departments" class="departments-section">
+  <div class="section-header">
     <h2>Our Departments</h2>
-    <div class="department-list">
-      <div class="department-card"><h3>Ushering Team</h3><p>Welcoming members and ensuring smooth services with order and warmth.</p></div>
-      <div class="department-card"><h3>Choir</h3><p>Leading worship through powerful hymns and music ministry.</p></div>
-      <div class="department-card"><h3>Evangelism</h3><p>Spreading the Gospel and reaching out to the community in love.</p></div>
-      <div class="department-card"><h3>Welfare</h3><p>Supporting church members in times of need with care and compassion.</p></div>
-      <div class="department-card"><h3>Technical/Media</h3><p>Handling sound, livestreams, and digital communication for the church.</p></div>
-      <div class="department-card"><h3>Hospitality</h3><p>Ensuring every visitor feels at home in God’s presence.</p></div>
-    </div>
-  </section>
+    <p>Serving God and the congregation with dedication and love.</p>
+  </div>
 
-  <!-- SERMONS -->
-  <section id="sermons" class="sermons">
-    <h2>Latest Sermons</h2>
-    <div class="sermon-list">
-      <div class="sermon-item"><h4>Walking in Faith</h4><p>By Rev. John Doe | September 28, 2025</p></div>
-      <div class="sermon-item"><h4>The Power of Prayer</h4><p>By Rev. Jane Smith | September 21, 2025</p></div>
-      <div class="sermon-item"><h4>Living with Purpose</h4><p>By Rev. John Doe | September 14, 2025</p></div>
+  <div class="department-list">
+
+    <div class="department-card">
+      <div class="logo-wrapper">
+        <img src="./images/singing band.jpg" alt="Singing Band Logo">
+      </div>
+      <h3>Singing Band</h3>
+      <p>Leading worship through music and praise.</p>
+      <a href="#" class="btn primary">Explore</a>
     </div>
-  </section>
+
+    <div class="department-card">
+      <div class="logo-wrapper">
+        <img src="./images/eot.jpg" alt="Echoes of Trinity Logo">
+      </div>
+      <h3>Echoes of Trinity</h3>
+      <p>Enriching worship with harmonies and melodies.</p>
+      <a href="#" class="btn primary">Explore</a>
+    </div>
+
+    <div class="department-card">
+      <div class="logo-wrapper">
+        <img src="./images/choir.jpg" alt="Church Choir Logo">
+      </div>
+      <h3>Church Choir</h3>
+      <p>Unifying voices to glorify God.</p>
+      <a href="#" class="btn primary">Explore</a>
+    </div>
+
+    <div class="department-card">
+      <div class="logo-wrapper">
+        <img src="./images/brigade2.jpg" alt="Brigade Logo">
+      </div>
+      <h3>Brigade</h3>
+      <p>Maintaining order and discipline during church activities.</p>
+      <a href="#" class="btn primary">Explore</a>
+    </div>
+
+    <div class="department-card">
+      <div class="logo-wrapper">
+        <img src="./images/bspg.png" alt="Bible Studies & Prayer Group Logo">
+      </div>
+      <h3>Bible Studies & Prayer Group</h3>
+      <p>Deepening faith through study and prayer.</p>
+      <a href="#" class="btn primary">Explore</a>
+    </div>
+
+    <div class="department-card">
+      <div class="logo-wrapper">
+        <img src="./images/hgfc.jpg" alt="Holy Ghost Festival Committee Logo">
+      </div>
+      <h3>Holy Ghost Festival Committee</h3>
+      <p>Organizing annual celebrations to glorify God.</p>
+      <a href="#" class="btn primary">Explore</a>
+    </div>
+
+    <div class="department-card">
+      <div class="logo-wrapper">
+        <img src="./images/ushers.jpeg" alt="Ushering Logo">
+      </div>
+      <h3>Ushering</h3>
+      <p>Welcoming and assisting members during services.</p>
+      <a href="#" class="btn primary">Explore</a>
+    </div>
+
+    <div class="department-card">
+      <div class="logo-wrapper">
+        <img src="./images/1743334000866.jpg" alt="Technical/Media Logo">
+      </div>
+      <h3>Technical/Media</h3>
+      <p>Managing sound, livestream, and digital content.</p>
+      <a href="#" class="btn primary">Explore</a>
+    </div>
+
+    <div class="department-card">
+      <div class="logo-wrapper">
+        <img src="./images/clerk-removebg-preview.png" alt="Welfare Logo">
+      </div>
+      <h3>Welfare</h3>
+      <p>Supporting church members with care and compassion.</p>
+      <a href="#" class="btn primary">Explore</a>
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- SERMONS -->
+<section id="sermons" class="sermons-section">
+  <div class="section-header">
+    <h2>Latest Sermons</h2>
+    <p>Feed your spirit and grow in faith with our recent messages.</p>
+  </div>
+
+  <div class="sermon-list">
+    <div class="sermon-row">
+      <div class="sermon-info">
+        <h3>Walking in Faith</h3>
+        <p class="sermon-preacher">By Rev. John Doe</p>
+      </div>
+      <div class="sermon-desc">
+        <p>A sermon about trusting God even in the toughest times, and walking boldly in faith.</p>
+      </div>
+      <div class="sermon-action">
+        <a href="#" class="btn primary">Watch</a>
+      </div>
+    </div>
+
+    <div class="sermon-row">
+      <div class="sermon-info">
+        <h3>The Power of Prayer</h3>
+        <p class="sermon-preacher">By Rev. Jane Smith</p>
+      </div>
+      <div class="sermon-desc">
+        <p>Exploring the transformative power of prayer and how it connects us to God’s will.</p>
+      </div>
+      <div class="sermon-action">
+        <a href="#" class="btn primary">Watch</a>
+      </div>
+    </div>
+
+    <div class="sermon-row">
+      <div class="sermon-info">
+        <h3>Living with Purpose</h3>
+        <p class="sermon-preacher">By Rev. John Doe</p>
+      </div>
+      <div class="sermon-desc">
+        <p>Discovering God’s plan for your life and how to live intentionally each day.</p>
+      </div>
+      <div class="sermon-action">
+        <a href="#" class="btn primary">Watch</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 
   <!-- EVENTS -->
   <section id="events" class="events">
@@ -518,6 +1111,12 @@
 
     menuToggle.addEventListener('click', () => {
       navLinks.classList.toggle('show');
+    });
+
+    AOS.init({
+      once: true,  // animate only once
+      duration: 800,
+      easing: 'ease-out',
     });
   </script>
 

@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PCG Trinity Congregation</title>
+  <style>
+    :root {
+      --primary: #004080;
+      --secondary: #f8b400;
+      --light: #f9f9f9;
+      --dark: #222;
+      --white: #fff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: var(--light);
+      color: var(--dark);
+      line-height: 1.6;
+    }
+
+    /* HEADER */
+  .site-header {
+    background: var(--primary);
+    color: var(--white);
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+  }
+
+  .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .logo {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 2px solid var(--secondary);
+    object-fit: cover;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+  }
+
+  .title h1 {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  .title p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: var(--secondary);
+    font-weight: 500;
+  }
+
+  /* NAV LINKS */
+  .nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    align-items: center;
+  }
+
+  .nav-links li a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 6px 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+  }
+
+  .nav-links li a:hover {
+    background: var(--secondary);
+    color: var(--dark);
+  }
+
+  .highlight {
+    background: var(--secondary);
+    color: var(--dark);
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-weight: 600;
+  }
+
+  .highlight:hover {
+    background: #d99a00;
+  }
+
+  /* HAMBURGER */
+  .menu-toggle {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: var(--white);
+    transition: transform 0.3s ease;
+  }
+
+  .menu-toggle:hover {
+    transform: scale(1.1);
+  }
+
+  /* MOBILE MENU */
+  @media (max-width: 900px) {
+    .nav-links {
+      position: absolute;
+      top: 70px;
+      right: 20px;
+      background: var(--primary);
+      flex-direction: column;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+      display: none;
+      animation: slideDown 0.3s ease forwards;
+    }
+
+    .nav-links.show {
+      display: flex;
+    }
+
+    .menu-toggle {
+      display: block;
+    }
+  }
+
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+    /* HERO */
+.hero {
+  position: relative;
+  height: 100vh;
+  background: url("https://source.unsplash.com/1600x900/?church,worship") center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7));
+  z-index: 1;
+}
+
+/* HERO CONTENT */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  color: #fff;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s ease forwards;
+}
+
+.hero h2 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.hero h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #f8b400;
+  font-weight: 600;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+/* BUTTONS */
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 15px 30px;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.btn.primary {
+  background: #f8b400;
+  color: #222;
+}
+
+.btn.primary:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  background: #d99a00;
+}
+
+.btn.secondary {
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.btn.secondary:hover {
+  background: #fff;
+  color: #222;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* SCROLL DOWN */
+.scroll-down {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem;
+  color: #f8b400;
+  animation: bounce 2s infinite;
+  cursor: pointer;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+  40% { transform: translateX(-50%) translateY(-10px); }
+  60% { transform: translateX(-50%) translateY(-5px); }
+}
+
+/* FADE IN ANIMATION */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .hero h2 { font-size: 2.5rem; }
+  .hero h3 { font-size: 1.5rem; }
+  .hero p { font-size: 1.1rem; }
+}
+
+@media (max-width: 768px) {
+  .hero h2 { font-size: 2rem; }
+  .hero h3 { font-size: 1.2rem; }
+  .hero p { font-size: 1rem; }
+  .hero-buttons { flex-direction: column; gap: 15px; }
+}
+
+
+    /* ABOUT */
+    .about {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .about img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    @media(max-width: 768px) {
+      .about {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* MINISTRIES */
+    .ministries, .departments, .events, .gallery {
+      text-align: center;
+    }
+
+    .ministry-list, .department-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .ministry-card, .department-card {
+      background: var(--white);
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .ministry-card:hover, .department-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    /* SERMONS */
+    .sermons {
+      text-align: center;
+    }
+
+    .sermon-list {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .sermon-item {
+      background: var(--white);
+      padding: 15px;
+      border-left: 5px solid var(--secondary);
+      text-align: left;
+    }
+
+    /* EVENTS */
+    .event-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .event-card {
+      background: var(--white);
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    /* GALLERY */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+    }
+
+    .gallery-grid img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    /* CONTACT */
+    .contact {
+      background: var(--primary);
+      color: var(--white);
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .contact p {
+      margin-bottom: 15px;
+    }
+
+    footer {
+      background: #111;
+      color: var(--white);
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+  <div class="logo-container">
+    <img src="./images/OIP.jpg" alt="PCG Trinity Logo" class="logo">
+    <div class="title">
+      <h1>PCG - Trinity Congregation</h1>
+      <p>Sunyani - Tonsuom Estate</p>
+    </div>
+  </div>
+  <nav>
+    <ul id="nav-links" class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#ministries">Ministries</a></li>
+      <li><a href="#departments">Departments</a></li>
+      <li><a href="#sermons">Sermons</a></li>
+      <li><a href="#events">Events</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#contact" class="highlight">Contact</a></li>
+    </ul>
+    <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+  </nav>
+</header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h2>Welcome to Presbyterian Church of Ghana</h2>
+      <h3>Trinity Congregation, Tonsuom Estate</h3>
+      <p>Glorifying God • Serving Community • Growing in Faith</p>
+      <div class="hero-buttons">
+        <a href="#about" class="btn primary">Learn More</a>
+        <a href="#sermons" class="btn secondary">Watch Sermons</a>
+      </div>
+    </div>
+    <div class="scroll-down">&#x2193;</div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="about">
+    <div>
+      <h2>About Us</h2>
+      <p>
+        The Presbyterian Church of Ghana, Trinity Congregation, is a Christ-centered community dedicated to worship, service, and evangelism. We aim to nurture faith, build fellowship, and impact society positively.
+      </p>
+    </div>
+    <img src="https://source.unsplash.com/600x400/?bible,church" alt="About PCG Trinity">
+  </section>
+
+  <!-- MINISTRIES -->
+  <section id="ministries" class="ministries">
+    <h2>Our Ministries</h2>
+    <div class="ministry-list">
+      <div class="ministry-card"><h3>Children’s Ministry</h3><p>Raising children in the fear of the Lord.</p></div>
+      <div class="ministry-card"><h3>Youth Ministry</h3><p>Building strong Christian leaders of tomorrow.</p></div>
+      <div class="ministry-card"><h3>Men’s Fellowship</h3><p>Empowering men to lead with faith and service.</p></div>
+      <div class="ministry-card"><h3>Women’s Fellowship</h3><p>Encouraging women to grow in faith and service.</p></div>
+    </div>
+  </section>
+
+  <!-- DEPARTMENTS -->
+  <section id="departments" class="departments">
+    <h2>Our Departments</h2>
+    <div class="department-list">
+      <div class="department-card"><h3>Ushering Team</h3><p>Welcoming members and ensuring smooth services with order and warmth.</p></div>
+      <div class="department-card"><h3>Choir</h3><p>Leading worship through powerful hymns and music ministry.</p></div>
+      <div class="department-card"><h3>Evangelism</h3><p>Spreading the Gospel and reaching out to the community in love.</p></div>
+      <div class="department-card"><h3>Welfare</h3><p>Supporting church members in times of need with care and compassion.</p></div>
+      <div class="department-card"><h3>Technical/Media</h3><p>Handling sound, livestreams, and digital communication for the church.</p></div>
+      <div class="department-card"><h3>Hospitality</h3><p>Ensuring every visitor feels at home in God’s presence.</p></div>
+    </div>
+  </section>
+
+  <!-- SERMONS -->
+  <section id="sermons" class="sermons">
+    <h2>Latest Sermons</h2>
+    <div class="sermon-list">
+      <div class="sermon-item"><h4>Walking in Faith</h4><p>By Rev. John Doe | September 28, 2025</p></div>
+      <div class="sermon-item"><h4>The Power of Prayer</h4><p>By Rev. Jane Smith | September 21, 2025</p></div>
+      <div class="sermon-item"><h4>Living with Purpose</h4><p>By Rev. John Doe | September 14, 2025</p></div>
+    </div>
+  </section>
+
+  <!-- EVENTS -->
+  <section id="events" class="events">
+    <h2>Upcoming Events</h2>
+    <div class="event-list">
+      <div class="event-card"><h3>Youth Praise Night</h3><p>October 10, 2025 | 6PM</p></div>
+      <div class="event-card"><h3>Women’s Retreat</h3><p>October 20, 2025 | 9AM</p></div>
+      <div class="event-card"><h3>Christmas Carol Service</h3><p>December 24, 2025 | 7PM</p></div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery" class="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery-grid">
+      <img src="https://source.unsplash.com/400x300/?worship" alt="Worship">
+      <img src="https://source.unsplash.com/400x300/?choir" alt="Choir">
+      <img src="https://source.unsplash.com/400x300/?bible" alt="Bible">
+      <img src="https://source.unsplash.com/400x300/?community" alt="Community">
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p>Email: info@pcgtrinity.org</p>
+    <p>Phone: +233 123 456 789</p>
+    <p>Location: Trinity Congregation, Accra, Ghana</p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 PCG Trinity Congregation. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    // Mobile Menu Toggle
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+  </script>
+
+</body>
+</html>

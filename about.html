@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About — PCG Trinity Congregation</title>
+
+  <!-- Styles -->
+  <style>
+    :root {
+  --blue-900: #003366;
+  --blue-700: #00509e;
+  --gold: #f8b400;
+  --gold-2: #ffd166;
+  --green: #11998e;
+  --red: #ff416c;
+  --muted: #6b7280;
+  --card-bg: rgba(255,255,255,0.85);
+  --glass: rgba(255,255,255,0.12);
+  --max-width: 1200px;
+  --radius-lg: 16px;
+  --radius-md: 12px;
+
+  /* extended theme */
+  --blue-dark: #0a2540;
+  --blue-light: #1e3a8a;
+  --gold-soft: #f9d976;
+  --text-dark: #0f172a;
+  --text-light: #f8fafc;
+  --glass-white: rgba(255,255,255,0.12);
+}
+
+/* Reset */
+* { box-sizing: border-box; }
+html, body { height: 100%; margin: 0; }
+body {
+  font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+  color: var(--text-light);
+  background: linear-gradient(135deg, var(--blue-dark), var(--blue-light), var(--green), var(--red));
+  background-size: 400% 400%;
+  animation: bgShift 15s ease infinite;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Animate background colors */
+@keyframes bgShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+
+/* Container */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* Header */
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 20px;
+  background: linear-gradient(90deg, var(--blue-900), var(--blue-700));
+  color: #fff;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  box-shadow: 0 6px 20px rgba(2,6,23,0.08);
+}
+
+.brand {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.brand .logo {
+  width: 46px; height: 46px; border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--gold);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.18);
+}
+.brand h1 { font-size: 1rem; margin: 0; font-weight: 700; }
+.brand p { font-size: 0.8rem; margin: 0; color: var(--gold-2); font-weight: 600; }
+
+/* Hero */
+.hero {
+  margin-top: 28px;
+  padding: 36px;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, rgba(0,80,158,0.95), rgba(248,180,0,0.9));
+  color: white;
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  justify-content: space-between;
+  animation: fadeUp 1s ease-out both;
+}
+.hero-left { max-width: 72%; }
+.hero h2 { margin: 0; font-size: 2rem; letter-spacing: -0.5px; }
+.hero p { margin: 12px 0 0; color: rgba(255,255,255,0.95); font-size: 1.05rem; }
+
+.hero-badge {
+  background: linear-gradient(180deg, rgba(255,255,255,0.14), rgba(255,255,255,0.06));
+  border-radius: 12px; padding: 10px 14px; text-align: center; min-width: 160px;
+  box-shadow: 0 8px 20px rgba(2,6,23,0.12);
+}
+.hero-badge h4 { margin: 0; color: var(--gold); font-size: 0.95rem; }
+.hero-badge p { margin: 6px 0 0; font-size: 0.9rem; color: #fff; opacity: 0.95; }
+
+/* Split layout */
+.split {
+  margin-top: 34px;
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 28px;
+  align-items: start;
+}
+
+/* History */
+.history {
+  background: var(--card-bg);
+  padding: 26px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(2,6,23,0.06);
+  color: var(--text-dark);
+  font-size: 1rem;
+  line-height: 1.8;
+  max-height: 520px;
+  overflow: auto;
+  animation: fadeUp 1.2s ease-out both;
+}
+.history h3 { margin-top: 0; color: var(--blue-900); font-size: 1.35rem; }
+.history p { margin: 0 0 1rem; }
+
+/* Info Card */
+.info-card {
+  position: sticky;
+  top: 96px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
+  border-radius: 14px;
+  padding: 18px;
+  box-shadow: 0 12px 30px rgba(2,6,23,0.15);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: var(--text-light);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeUp 1.5s ease-out both;
+}
+/* Soft gold glow on hover for info items */
+.info-item:hover {
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 15px rgba(248, 180, 0, 0.5), 0 4px 10px rgba(248, 180, 0, 0.25);
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+}
+
+/* Subtle shimmer for the info card on hover */
+.info-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 25px rgba(248, 180, 0, 0.4), 0 8px 20px rgba(248, 180, 0, 0.25);
+  animation: glow 1.5s infinite alternate;
+}
+
+/* Glow animation for hovering cards */
+@keyframes glow {
+  0% { box-shadow: 0 0 8px rgba(248,180,0,0.3), 0 4px 12px rgba(248,180,0,0.2); }
+  50% { box-shadow: 0 0 18px rgba(248,180,0,0.5), 0 6px 18px rgba(248,180,0,0.3); }
+  100% { box-shadow: 0 0 8px rgba(248,180,0,0.3), 0 4px 12px rgba(248,180,0,0.2); }
+}
+
+
+.info-card h4 {
+  margin: 0 0 8px;
+  color: var(--gold-soft);
+  font-size: 1.05rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.info-list { display: grid; gap: 12px; }
+.info-item {
+  background: linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03));
+  padding: 12px;
+  border-radius: 10px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  border-left: 4px solid var(--gold);
+  color: var(--text-light);
+  transition: background 0.3s;
+}
+
+.info-item strong { display: block; color: var(--gold-soft); }
+.info-item span { display: block; color: rgba(255,255,255,0.85); font-size: 0.95rem; }
+
+/* Meta Row */
+.meta-row { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+.flag {
+  font-weight: 700;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.06);
+  color: var(--gold-2);
+  font-size: 0.85rem;
+}
+
+/* Patrons */
+.patrons-section { margin-top: 48px; animation: fadeUp 1.3s ease-out both; }
+.patron-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; }
+.patron-card {
+  padding: 16px;
+  border-radius: 12px;
+  background: linear-gradient(160deg, var(--blue-dark), var(--blue-light));
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.2);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s;
+}
+.patron-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 25px rgba(255,215,0,0.4);
+}
+.patron-name { font-weight: 700; color: var(--gold-soft); }
+.patron-role { color: var(--text-light); font-size: 0.95rem; opacity: 0.9; }
+.patron-label { margin-top: auto; color: var(--gold); font-weight: 600; font-size: 0.85rem; }
+
+/* Presbyters */
+.presbyters { margin-top: 36px; animation: fadeUp 1.4s ease-out both; }
+.presby-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 18px;
+}
+
+.presby-card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
+  padding: 14px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+.presby-card:hover {
+  transform: scale(1.05);
+  background: rgba(255,255,255,0.15);
+}
+.presby-img {
+  width: 100px; height: 100px;
+  border-radius: 50%; object-fit: cover;
+  margin: 0 auto 10px;
+  border: 3px solid var(--gold);
+}
+.presby-name { font-weight: 700; color: var(--gold-soft); margin: 0; }
+.presby-role { color: rgba(255,255,255,0.85); font-size: 0.95rem; margin: 6px 0 0; }
+
+/* Footer */
+footer.site-footer {
+  margin-top: 48px;
+  background: var(--blue-900);
+  color: #fff;
+  padding: 18px;
+  border-radius: 10px;
+}
+.footer-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.credit {
+  color: rgba(255,255,255,0.32);
+  font-weight: 300;
+  font-size: 0.9rem;
+}
+
+/* Scrollbars */
+.history::-webkit-scrollbar { width: 8px; }
+.history::-webkit-scrollbar-thumb {
+  background: rgba(2,6,23,0.08);
+  border-radius: 8px;
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+  .split { grid-template-columns: 1fr 320px; }
+}
+@media (max-width: 900px) {
+  .hero { flex-direction: column; }
+  .split { grid-template-columns: 1fr; }
+  .patron-grid { grid-template-columns: repeat(2,1fr); }
+  .presby-grid { grid-template-columns: repeat(2,1fr); }
+}
+@media (max-width: 480px) {
+  .patron-grid, .presby-grid { grid-template-columns: 1fr; }
+}
+
+/* === Animations === */
+@keyframes fadeUp {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- header -->
+  <header class="site-header">
+    <div class="brand">
+      <img src="./images/OIP.jpg" alt="PCG Trinity Logo" class="logo" />
+      <div>
+        <h1>PCG — Trinity Congregation</h1>
+        <p>Sunyani • Tonsuom Estate</p>
+      </div>
+    </div>
+    <nav aria-label="Main navigation">
+      <a href="index.html" style="color:#fff;font-weight:600">Home</a>
+    </nav>
+  </header>
+
+  <main class="container">
+
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="about-hero">
+      <div class="hero-left">
+        <h2 id="about-hero">About the Presbyterian Church of Ghana — Trinity Congregation</h2>
+        <p class="mb-8">A Christ-centered family devoted to worship, fellowship, service and the formation of disciples. Below is our story, our mission and the people who serve.</p>
+      </div>
+
+      <div class="hero-badge" aria-hidden="true">
+        <h4>PCG Trinity</h4>
+        <p>Established to glorify God & serve community</p>
+      </div>
+    </section>
+
+    <!-- SPLIT: History + Info card -->
+    <section class="split" aria-label="Church history and quick info">
+
+      <!-- HISTORY (left) -->
+      <article class="history" aria-labelledby="history-title">
+        <h3 id="history-title">Church History</h3>
+
+        <!-- placeholder long text - replace with your full history -->
+        <p>
+          <!-- long history placeholder -->
+          The Presbyterian Church of Ghana — Trinity Congregation — started as a small fellowship of believers committed to prayer, scripture and community outreach. Over the years, God has grown our fellowship into a thriving congregation that seeks to impact lives in Sunyani and beyond. We have a rich legacy of worship, education and service derived from the Presbyterian tradition. (Replace this with your complete history text.)
+        </p>
+
+        <p>
+          Our journey has been shaped by faithful leadership, committed volunteers and a vision to reach our community with the gospel. From humble beginnings we’ve established ministries for children, youth and adults, started scholarship programs, and championed welfare projects supporting families in need.
+        </p>
+
+        <p>
+          The congregation continues to prioritize discipleship, worship and outreach—remaining steadfast in prayer and proactive in service. The next chapters will deepen our impact through strategic evangelism, youth empowerment and educational initiatives.
+        </p>
+
+        <p>
+          (Long history body continues — paste the detailed parish history here. The history area is intentionally scrollable on wider screens, but will expand naturally on mobile.)
+        </p>
+      </article>
+
+      <!-- INFO CARD (right) -->
+      <aside class="info-card" aria-labelledby="info-title">
+        <h4 id="info-title">Quick Church Info</h4>
+
+        <div class="info-list">
+          <div class="info-item">
+            <div>
+              <strong>Mission</strong>
+              <span>To glorify God, make disciples and serve our community in love.</span>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div>
+              <strong>Vision</strong>
+              <span>A transformed community living God-centered lives.</span>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div>
+              <strong>PCG Theme (Year)</strong>
+              <span>Renewed Faith • 2025</span>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div>
+              <strong>Church Theme (Year)</strong>
+              <span>Trinity: A Family of Faith • 2025</span>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div>
+              <strong>Monthly Focus</strong>
+              <span>Community Outreach & Discipleship</span>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div>
+              <strong>Slogan</strong>
+              <span>Glorify • Serve • Grow</span>
+            </div>
+          </div>
+
+        </div>
+
+      </aside>
+    </section>
+
+    <!-- PATRONS -->
+    <section class="patrons-section" aria-labelledby="patrons-title">
+      <h3 id="patrons-title" style="margin:0 0 14px;color:var(--blue-900)">Patrons</h3>
+      <div class="patron-grid">
+        <!-- repeat for each patron -->
+        <div class="patron-card">
+          <div class="patron-name">Elder Kofi Mensah</div>
+          <div class="patron-role">Chair, Finance Committee</div>
+          <div class="patron-label">Patron</div>
+        </div>
+
+        <div class="patron-card">
+          <div class="patron-name">Elder Akosua Boateng</div>
+          <div class="patron-role">Coordinator, Programs</div>
+          <div class="patron-label">Patron</div>
+        </div>
+
+        <div class="patron-card">
+          <div class="patron-name">Mr. Daniel Owusu</div>
+          <div class="patron-role">Patron — Community Relations</div>
+          <div class="patron-label">Patron</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRESBYTERS -->
+    <section class="presbyters" aria-labelledby="presbyters-title">
+      <h3 id="presbyters-title" style="margin:18px 0 14px;color:var(--blue-900)">Presbyters</h3>
+      <div class="presby-grid">
+        <!-- sample presbyter cards; replace src with real images -->
+        <div class="presby-card">
+          <img src="./images/11 Closing Prayers For A Meeting - The Prayer Pocket.jpeg" alt="Presbyter 1" class="presby-img">
+          <p class="presby-name">Rev. John Doe</p>
+          <p class="presby-role">Senior Pastor</p>
+        </div>
+
+        <div class="presby-card">
+          <img src="./images/ALL NIGHT SERVICE.jpg" alt="Presbyter 2" class="presby-img">
+          <p class="presby-name">Rev. Jane Smith</p>
+          <p class="presby-role">Associate Pastor</p>
+        </div>
+
+        <div class="presby-card">
+          <img src="./images/download (6).png" alt="Presbyter 3" class="presby-img">
+          <p class="presby-name">Mr. Emmanuel Adu</p>
+          <p class="presby-role">Welfare Coordinator</p>
+        </div>
+
+        <div class="presby-card">
+          <img src="./images/download (6).png" alt="Presbyter 4" class="presby-img">
+          <p class="presby-name">Mrs. Grace Opoku</p>
+          <p class="presby-role">Youth Director</p>
+        </div>
+
+        <div class="presby-card">
+          <img src="./images/eot.jpg" alt="Presbyter 4" class="presby-img">
+          <p class="presby-name">Mrs. Grace Opoku</p>
+          <p class="presby-role">Youth Director</p>
+        </div>
+
+        <div class="presby-card">
+          <img src="./images/download (5).png" alt="Presbyter 4" class="presby-img">
+          <p class="presby-name">Mrs. Grace Opoku</p>
+          <p class="presby-role">Youth Director</p>
+        </div>
+
+        <div class="presby-card">
+          <img src="./images/FB_IMG_1746708916253.jpg" alt="Presbyter 4" class="presby-img">
+          <p class="presby-name">Mrs. Grace Opoku</p>
+          <p class="presby-role">Youth Director</p>
+        </div>
+
+        <div class="presby-card">
+          <img src="./images/FB_IMG_1746708864825.jpg" alt="Presbyter 4" class="presby-img">
+          <p class="presby-name">Mrs. Grace Opoku</p>
+          <p class="presby-role">Youth Director</p>
+        </div>
+
+        <div class="presby-card">
+          <img src="./images/brigade2.jpg" alt="Presbyter 4" class="presby-img">
+          <p class="presby-name">Mrs. Grace Opoku</p>
+          <p class="presby-role">Youth Director</p>
+        </div>
+
+        <div class="presby-card">
+          <img src="./images/1743334043468.jpg" alt="Presbyter 4" class="presby-img">
+          <p class="presby-name">Mrs. Grace Opoku</p>
+          <p class="presby-role">Youth Director</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>&copy; 2025 PCG Trinity Congregation. All rights reserved.</div>
+      <div class="credit">Made by AJ</div>
+    </div>
+  </footer>
+
+  <!-- optional: small script to improve scroll behavior for history box -->
+  <script>
+    // keep focusable elements accessible inside history scroll area
+    const historyEl = document.querySelector('.history');
+    if(historyEl){
+      historyEl.addEventListener('wheel', (e) => {
+        // allows natural scroll on small devices
+      }, {passive:true});
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Women's Fellowship - Trinity Congregation</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --green: #1fab89;
+      --gold: #ffd166;
+      --blue-dark: #001f3f;
+      --bg-dark: #003366;
+      --white: #f8fafc;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    body {
+      background: var(--bg-dark);
+      color: var(--white);
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    /* HERO / TOP SECTION */
+    .hero {
+      position: relative;
+      height: 320px;
+      background: url('./images/1746141876556.jpg') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: var(--white);
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.45); /* lighter overlay for readability */
+      z-index: 0;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 900px;
+      padding: 0 20px;
+    }
+
+    .hero-content h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .hero-content p {
+      font-size: 1.2rem;
+      color: var(--gold);
+    }
+
+    /* SECTION CONTAINER */
+    .section {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+      background: var(--blue-dark);
+      border-radius: 20px;
+      padding: 30px 20px;
+    }
+
+    .section h2 {
+      font-size: 2rem;
+      color: var(--green);
+      margin-bottom: 16px;
+      border-left: 6px solid var(--gold);
+      padding-left: 12px;
+    }
+
+    .section p {
+      margin-bottom: 16px;
+      text-align: justify;
+    }
+
+    /* Leaders / Details list */
+    .details-list {
+      list-style: none;
+      margin-bottom: 20px;
+    }
+
+    .details-list li {
+      margin-bottom: 8px;
+      padding-left: 12px;
+      position: relative;
+    }
+
+    .details-list li::before {
+      content: "•";
+      color: var(--green);
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    /* Photo gallery */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 12px;
+      object-fit: cover;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      border: 2px solid var(--gold);
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+    }
+
+    /* Back Button */
+    .back-btn {
+      display: inline-block;
+      margin: 60px auto;
+      padding: 12px 30px;
+      background: linear-gradient(90deg, var(--green), var(--gold));
+      color: var(--blue-dark);
+      border-radius: 30px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: transform 0.3s ease;
+    }
+
+    .back-btn:hover {
+      transform: scale(1.05);
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 768px) {
+      .hero-content h1 {
+        font-size: 2rem;
+      }
+      .hero-content p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Women's Fellowship</h1>
+      <p>"Let your light shine" – Matt. 5:16</p>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section class="section">
+    <h2>About Women's Fellowship</h2>
+    <p>Women’s Fellowship is an active generational group for all women between the ages of 40 and above. The group was started in 2019. Currently, the membership strength of the group is about 35.</p>
+  </section>
+
+  <!-- AIM -->
+  <section class="section">
+    <h2>Aim</h2>
+    <p>The Fellowship aims to help the women in the church lead exemplary lives as Christian women in love and unity, so that at home, in the market, and in public, their behavior will attract other women to Christ.</p>
+  </section>
+
+  <!-- HOW TO JOIN -->
+  <section class="section">
+    <h2>How to Join</h2>
+    <p>Every woman above 40 years can join the group.</p>
+  </section>
+
+  <!-- LEADERSHIP -->
+  <section class="section">
+    <h2>Leadership</h2>
+    <ul class="details-list">
+      <li>— Add leaders here —</li>
+    </ul>
+  </section>
+
+  <!-- MEETING DAYS -->
+  <section class="section">
+    <h2>Meeting Days</h2>
+    <p>The fellowship meets once a month, usually on the last Saturday of the month at 8:00pm.</p>
+  </section>
+
+  <!-- PROGRAMME & ACTIVITIES -->
+  <section class="section">
+    <h2>Programs & Activities</h2>
+    <p>Our programs include health talks, prayer meetings, singing, Bible studies, discussions, and debates.</p>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="section">
+    <h2>Gallery</h2>
+    <div class="gallery">
+      <img src="./images/1746141876556.jpg" alt="Women's Fellowship Photo 1">
+      <img src="./images/eb3dceb5-9d5f-4d45-b822-d797019d9041.jpeg" alt="Women's Fellowship Photo 2">
+      <img src="./images/FB_IMG_1746709056641.jpg" alt="Women's Fellowship Photo 3">
+      <img src="./images/FB_IMG_1746708874077.jpg" alt="Women's Fellowship Photo 4">
+      <img src="./images/FB_IMG_1746709056641.jpg" alt="Women's Fellowship Photo 5">
+    </div>
+  </section>
+
+  <!-- BACK BUTTON -->
+  <div class="section" style="text-align:center;">
+    <a href="index.html" class="back-btn">Back to Generational Groups</a>
+  </div>
+
+</body>
+</html>

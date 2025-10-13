@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brigade - PCG Trinity</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      background: #0a0f1f;
+      color: #fff;
+    }
+
+    .card {
+      background: #0c1525;
+      border-radius: 16px;
+      padding: 30px;
+      margin: 40px auto;
+      max-width: 1000px;
+      box-shadow: 0 0 25px rgba(0, 255, 255, 0.2);
+    }
+
+    h1, h2, h3 {
+      color: #00ffff;
+      text-shadow: 0 0 8px rgba(0, 255, 255, 0.5);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .slogan {
+      text-align: center;
+      font-style: italic;
+      margin-bottom: 25px;
+      color: #a0f0ff;
+    }
+
+    p {
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .section-title {
+      font-size: 1.4rem;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #00ffff;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    ul {
+      list-style-type: disc;
+      padding-left: 20px;
+      margin-bottom: 20px;
+    }
+
+    .gallery-section {
+      margin-top: 30px;
+    }
+
+    .gallery-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 14px;
+      box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      background: #0d1a2a;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.1);
+    }
+
+    .gallery-item:hover {
+      box-shadow: 0 0 25px rgba(0, 255, 255, 0.6);
+      transform: translateY(-5px);
+    }
+
+    .back-btn {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 12px 25px;
+      background: #00ffff;
+      color: #0a0f1f;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    .back-btn:hover {
+      background: #00aaff;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h1>Brigade</h1>
+    <p class="slogan">“Order and Discipline in Service to God”</p>
+
+    <!-- Short Note -->
+    <p>The Brigade is responsible for maintaining order and discipline during church services and events, ensuring smooth flow and assisting members as needed.</p>
+
+    <!-- History Section -->
+    <h2 class="section-title">History</h2>
+    <p>Founded alongside the church’s early ministries, the Brigade has provided consistent support in organizing services, coordinating events, and maintaining decorum for over a decade.</p>
+
+    <!-- What We Do Section -->
+    <h2 class="section-title">What We Do</h2>
+    <ul>
+      <li>Manage seating and ushering during church services.</li>
+      <li>Ensure smooth flow of events and activities.</li>
+      <li>Support special programs and large gatherings.</li>
+      <li>Train members in leadership, discipline, and teamwork.</li>
+    </ul>
+
+    <!-- Departments Within -->
+    <h2 class="section-title">Departments Within Us</h2>
+    <ul>
+      <li>Ushering Unit</li>
+      <li>Event Coordination Team</li>
+      <li>Training & Development Team</li>
+    </ul>
+
+    <!-- Leaders / Executives -->
+    <h2 class="section-title">Leaders / Executives</h2>
+    <ul>
+      <li>Brigade Commander: Rev. Kofi Mensah</li>
+      <li>Deputy Commander: Ama Serwaa</li>
+      <li>Coordinator: Kwame Ofori</li>
+      <li>Secretary: Abena Agyemang</li>
+    </ul>
+
+    <!-- Meetings -->
+    <h2 class="section-title">Meeting Details</h2>
+    <p><strong>Days:</strong> Mondays & Fridays</p>
+    <p><strong>Time:</strong> 4:00 PM – 6:00 PM</p>
+    <p><strong>Venue:</strong> Church Fellowship Hall</p>
+
+    <!-- Contact -->
+    <h2 class="section-title">Contact</h2>
+    <p>Email: brigade@pcgtrinity.org | Phone: +233 912 345 678</p>
+
+    <!-- Programs & Activities -->
+    <h2 class="section-title">Programs & Activities</h2>
+    <ul>
+      <li>Usher Training Workshops</li>
+      <li>Event Coordination for Church Programs</li>
+      <li>Security & Safety Drills</li>
+      <li>Support in Annual Church Events</li>
+    </ul>
+
+    <!-- Gallery -->
+    <div class="gallery-section">
+      <h2>Gallery</h2>
+      <div class="gallery-container">
+        <div class="gallery-item">
+          <img src="./images/11 Closing Prayers For A Meeting - The Prayer Pocket.jpeg" alt="Brigade in Service">
+        </div>
+        <div class="gallery-item">
+          <img src="./images/11 Closing Prayers For A Meeting - The Prayer Pocket.jpeg" alt="Brigade in Service">
+        </div>
+        <div class="gallery-item">
+          <img src="./images/11 Closing Prayers For A Meeting - The Prayer Pocket.jpeg" alt="Brigade in Service">
+        </div>
+        <div class="gallery-item">
+          <img src="./images/11 Closing Prayers For A Meeting - The Prayer Pocket.jpeg" alt="Brigade in Service">
+        </div>
+      </div>
+    </div>
+
+    <!-- Back Button -->
+    <a href="index.html" class="back-btn">Back to Home</a>
+  </div>
+
+</body>
+</html>

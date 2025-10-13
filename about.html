@@ -210,25 +210,6 @@ img { max-width: 100%; display: block; }
   font-size: 0.85rem;
 }
 
-/* Patrons */
-.patrons-section { margin-top: 48px; animation: fadeUp 1.3s ease-out both; }
-.patron-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; }
-.patron-card {
-  padding: 16px;
-  border-radius: 12px;
-  background: linear-gradient(160deg, var(--blue-dark), var(--blue-light));
-  color: #fff;
-  border: 1px solid rgba(255,255,255,0.2);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
-  transition: transform 0.3s ease, box-shadow 0.3s;
-}
-.patron-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 0 25px rgba(255,215,0,0.4);
-}
-.patron-name { font-weight: 700; color: var(--gold-soft); }
-.patron-role { color: var(--text-light); font-size: 0.95rem; opacity: 0.9; }
-.patron-label { margin-top: auto; color: var(--gold); font-weight: 600; font-size: 0.85rem; }
 
 /* Presbyters */
 .presbyters { margin-top: 36px; animation: fadeUp 1.4s ease-out both; }
@@ -374,20 +355,6 @@ footer.site-footer {
         <div class="info-list">
           <div class="info-item">
             <div>
-              <strong>Mission</strong>
-              <span>To glorify God, make disciples and serve our community in love.</span>
-            </div>
-          </div>
-
-          <div class="info-item">
-            <div>
-              <strong>Vision</strong>
-              <span>A transformed community living God-centered lives.</span>
-            </div>
-          </div>
-
-          <div class="info-item">
-            <div>
               <strong>PCG Theme (Year)</strong>
               <span>Renewed Faith • 2025</span>
             </div>
@@ -397,13 +364,6 @@ footer.site-footer {
             <div>
               <strong>Church Theme (Year)</strong>
               <span>Trinity: A Family of Faith • 2025</span>
-            </div>
-          </div>
-
-          <div class="info-item">
-            <div>
-              <strong>Monthly Focus</strong>
-              <span>Community Outreach & Discipleship</span>
             </div>
           </div>
 
@@ -419,30 +379,146 @@ footer.site-footer {
       </aside>
     </section>
 
-    <!-- PATRONS -->
-    <section class="patrons-section" aria-labelledby="patrons-title">
-      <h3 id="patrons-title" style="margin:0 0 14px;color:var(--blue-900)">Patrons</h3>
-      <div class="patron-grid">
-        <!-- repeat for each patron -->
-        <div class="patron-card">
-          <div class="patron-name">Elder Kofi Mensah</div>
-          <div class="patron-role">Chair, Finance Committee</div>
-          <div class="patron-label">Patron</div>
-        </div>
-
-        <div class="patron-card">
-          <div class="patron-name">Elder Akosua Boateng</div>
-          <div class="patron-role">Coordinator, Programs</div>
-          <div class="patron-label">Patron</div>
-        </div>
-
-        <div class="patron-card">
-          <div class="patron-name">Mr. Daniel Owusu</div>
-          <div class="patron-role">Patron — Community Relations</div>
-          <div class="patron-label">Patron</div>
-        </div>
+    <!-- MISSION, VISION & CORE VALUES -->
+<section id="mission-vision" style="background: linear-gradient(135deg, #0a2540, #1e3a8a); padding: 60px 20px; color: #fff;">
+  <div class="container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start;">
+    
+    <!-- Mission & Vision -->
+    <div class="mv-text" style="display: flex; flex-direction: column; gap: 24px;">
+      <div>
+        <h3 style="margin-bottom: 12px; color: #ffd166;">Our Mission</h3>
+        <p>“To uphold the Centrality of the Word of God and through the enablement of the Holy Spirit, pursue a holistic ministry, so as to bring all of creation to glorify God.”</p>
+        <p>Through:</p>
+        <ol style="padding-left: 20px; margin: 0;">
+          <li>Mobilizing the entire church for prayer.</li>
+          <li>Improving church growth through evangelism and nurture.</li>
+          <li>Attaining self-sufficiency through effective resource mobilization.</li>
+          <li>Promoting socio-economic development through advocacy and effective delivery of social service.</li>
+          <li>Upholding the Reformed Tradition.</li>
+          <li>Cherishing partnership with worldwide body of Christ.</li>
+        </ol>
       </div>
-    </section>
+
+      <div>
+        <h3 style="margin-bottom: 12px; color: #ffd166;">Our Vision</h3>
+        <p>“To be a Christ-Centered, Self-Sustaining and Growing Church.”</p>
+      </div>
+    </div>
+
+    <!-- Core Values -->
+    <div class="core-values" style="background: rgba(255,255,255,0.08); padding: 24px; border-radius: 16px;">
+      <h3 style="margin-bottom: 16px; color: #ffd166;">Our Core Values</h3>
+      <ul style="list-style: none; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+        <li>✔ The Centrality of the Word of God</li>
+        <li>✔ Discipline</li>
+        <li>✔ Hardwork</li>
+        <li>✔ Integrity</li>
+        <li>✔ Humility</li>
+        <li>✔ Unity</li>
+        <li>✔ Upholding Democratic Principles</li>
+        <li>✔ Godly Leadership and Skills Development</li>
+        <li>✔ Sound Moral Principle</li>
+      </ul>
+    </div>
+    
+  </div>
+</section>
+
+<!-- Responsive -->
+<style>
+  @media (max-width: 900px) {
+    #mission-vision .container { grid-template-columns: 1fr; }
+    #mission-vision .core-values ul { grid-template-columns: 1fr; }
+  }
+</style>
+
+<!-- MONTHLY FOCUS -->
+<section id="monthly-focus" style="background: linear-gradient(135deg, #0a2540, #1e3a8a); padding: 60px 20px; color: #fff;">
+  <div class="container">
+    <div class="focus-card" style="background: rgba(255,255,255,0.08); padding: 32px; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+      <h3 style="margin-bottom: 24px; color: #ffd166;">Monthly Focus</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent et urna in sapien fermentum tincidunt. Quisque eget magna ut lorem efficitur bibendum. Donec ac semper lorem. Nulla facilisi. (Psalm 23:1-4)</p>
+      <p>Curabitur ut ligula id odio euismod tincidunt. Morbi non leo a justo hendrerit suscipit. Proin vel elit nec massa aliquet suscipit. (Matthew 5:16)</p>
+      <p>Integer sed massa ac justo fermentum volutpat. Sed vitae velit nec mauris malesuada aliquet. Vivamus a mauris eget odio luctus efficitur. (Romans 12:2)</p>
+      <p>Maecenas consequat lorem nec dui dapibus, at vehicula purus dignissim. Suspendisse potenti. (Philippians 4:13)</p>
+    </div>
+  </div>
+</section>
+
+<!-- Responsive -->
+<style>
+  #monthly-focus .focus-card p {
+    line-height: 1.8;
+    margin-bottom: 16px;
+  }
+
+  @media (max-width: 900px) {
+    #monthly-focus .focus-card {
+      padding: 24px;
+    }
+  }
+</style>
+
+
+<!-- AGENTS OF THE CHURCH -->
+<section id="agents" style="margin-top:60px; padding: 40px 20px; background: rgba(0,32,64,0.85); border-radius: 20px; color: #fff;">
+  <div class="container">
+    <h3 style="margin-bottom: 24px; color: #ffd166;">Agents of the Church</h3>
+
+    <!-- CURRENT LEADERS -->
+    <div class="agents-grid" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 18px; margin-bottom: 40px;">
+      <!-- Minister-in-Charge -->
+      <div class="agent-card" style="background: rgba(255,255,255,0.08); padding: 20px; border-radius: 14px; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; height:250px;">
+        <img src="./images/1743334000866.jpg" alt="Rev. Benjamin Kwasi Ampofo" style="width:100px;height:100px;border-radius:50%;border:3px solid #ffd166;object-fit:cover;margin-bottom:12px;">
+        <p style="font-weight:700; color:#ffd166; margin:0;">Rev. Benjamin Kwasi Ampofo</p>
+        <p style="font-size:0.9rem; color:rgba(255,255,255,0.85); margin:4px 0;">Minister-In-Charge & District Minister</p>
+      </div>
+
+      <!-- Catechist -->
+      <div class="agent-card" style="background: rgba(255,255,255,0.08); padding: 20px; border-radius: 14px; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; height:250px;">
+        <img src="./images/1746141876556.jpg" alt="Dorothy Damoah" style="width:100px;height:100px;border-radius:50%;border:3px solid #ffd166;object-fit:cover;margin-bottom:12px;">
+        <p style="font-weight:700; color:#ffd166; margin:0;">Dorothy Damoah</p>
+        <p style="font-size:0.9rem; color:rgba(255,255,255,0.85); margin:4px 0;">Catechist</p>
+      </div>
+    </div>
+
+    <!-- ROLL OF MINISTERS -->
+    <h4 style="margin-bottom:16px; color:#ffd166;">Roll of Ministers</h4>
+    <ul style="list-style:none; padding:0; line-height:1.8;">
+      <li>2003-2007 – Rev. ...</li>
+      <li>2007-2012 – Rev. ...</li>
+      <li>2012-2016 – Rev. Joseph Ahinakwah</li>
+      <li>2016-2017 – Acting Rev. Gabriel Sackey Madjitey</li>
+      <li>2017-2020 – Rev. Charles Kwasi Yboah</li>
+      <li>2020-2024 – Rev. Emmanuel Goddey Ntiamoah</li>
+      <li>2024-2025 – Acting Rev. Benjamin Appiah</li>
+      <li>2025-Present – Rev. Benjamin Kwasi Ampofo</li>
+    </ul>
+
+    <!-- ROLL OF CATECHISTS -->
+    <h4 style="margin:24px 0 16px; color:#ffd166;">Roll of Catechists</h4>
+    <ul style="list-style:none; padding:0; line-height:1.8;">
+      <li>2003-2020 – Catechist ...</li>
+      <li>2020-2025 – Catechist ...</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Optional CSS -->
+<style>
+  .agents-grid .agent-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 20px rgba(255,215,0,0.3);
+    transition: all 0.3s ease;
+  }
+
+  @media (max-width: 480px) {
+    .agents-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
 
     <!-- PRESBYTERS -->
     <section class="presbyters" aria-labelledby="presbyters-title">

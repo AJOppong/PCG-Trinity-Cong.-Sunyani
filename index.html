@@ -468,7 +468,7 @@
 
 /* ANNOUNCEMENTS SECTION */
 .announcements-section {
-  background-color: #111a2b; /* deeper background for contrast */
+  background-color: #111a2b; /* dark background */
   color: #fff;
   padding: 80px 20px;
   text-align: center;
@@ -487,6 +487,7 @@
   margin-bottom: 40px;
 }
 
+/* Container for cards */
 .announcements-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -495,18 +496,15 @@
   margin: 0 auto;
 }
 
+/* Generic card style */
 .announcement-card {
-  background-color: #1e2743;
+  background: rgba(255, 255, 255, 0.12);
   padding: 25px;
   border-radius: 15px;
   text-align: left;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border-left: 5px solid #f5b700; /* adds a modern highlight accent */
-}
-
-.announcement-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  color: var(--text-light);
+  border-left: 5px solid #f5b700; /* accent */
 }
 
 .announcement-card h3 {
@@ -523,8 +521,39 @@
 
 .announcement-card .details {
   font-size: 1rem;
-  color: #d9d9d9;
   line-height: 1.5;
+  color: #d9d9d9;
+}
+
+.announcement-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+}
+
+/* FIRST CARD HIGHLIGHT */
+/* FIRST CARD HIGHLIGHT */
+.announcements-container .announcement-card:first-child {
+  background: linear-gradient(135deg, #ffd166, #f8b400); /* golden gradient */
+  color: #1a1a1a;
+  font-weight: 700; /* bolder */
+  border: 2px solid #fff8c0;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4); /* deeper shadow */
+  transform: scale(1.03); /* slightly bigger */
+  padding: 35px; /* more padding for emphasis */
+  text-align: left;
+}
+
+/* Make sure all child elements inherit dark text and stand out */
+.announcements-container .announcement-card:first-child h3,
+.announcements-container .announcement-card:first-child .date,
+.announcements-container .announcement-card:first-child .details {
+  color: #1a1a1a; 
+  font-weight: 600;
+  line-height: 1.7; /* more spacing for readability */
+}
+
+.announcements-container .announcement-card:first-child .details {
+  font-size: 1.05rem; /* slightly larger text */
 }
 
 
@@ -1738,10 +1767,11 @@
 
   <div class="announcements-container">
     <div class="announcement-card">
-      <h3>Harvest Thanksgiving Service</h3>
-      <p class="date">📅 Sunday, Oct 13, 2025</p>
-      <p class="details">Join us for our annual Harvest Thanksgiving Service at 9:00 AM. Come celebrate God’s goodness with praise, offering, and fellowship.</p>
-    </div>
+      <h3>Tithes and Offerings</h3>
+      <p><strong>Bank Account:</strong> 123-456-789, PCG Trinity Bank</p>
+      <p><strong>Mobile Money:</strong> 0244-XXX-XXX (MTN), 0555-XXX-XXX (Vodafone)</p>
+      <p><strong>Contact:</strong> +233 24 XXX XXXX for enquiries</p>
+  </div>
 
     <div class="announcement-card">
       <h3>Youth Retreat 2025</h3>
@@ -1783,42 +1813,42 @@
       <img src="./images/children's service.png" alt="Children's Service Logo" class="ministry-logo">
       <h3>Children’s Service</h3>
       <p>Guiding the little ones in faith and love.</p>
-      <a href="" class="btn primary">Explore</a>
+      <a href="children_service.html" class="btn primary">Explore</a>
     </div>
 
     <div class="ministry-card">
       <img src="./images/jy.jpeg" alt="Junior Youth Logo" class="ministry-logo">
       <h3>Junior Youth (JY)</h3>
       <p>Building strong young believers for tomorrow.</p>
-      <a href="" class="btn primary">Explore</a>
+      <a href="jy.html" class="btn primary">Explore</a>
     </div>
 
     <div class="ministry-card">
       <img src="./images/ypg 2.png" alt="Young People's Guild Logo" class="ministry-logo">
       <h3>Young People's Guild (YPG)</h3>
       <p>Fostering fellowship and growth among youth.</p>
-      <a href="" class="btn primary">Explore</a>
+      <a href="ypg.html" class="btn primary">Explore</a>
     </div>
 
     <div class="ministry-card">
       <img src="./images/yafs.png" alt="Young Adults Fellowship Logo" class="ministry-logo">
       <h3>Young Adults Fellowship (YAF)</h3>
       <p>Encouraging spiritual and social development in young adults.</p>
-      <a href="" class="btn primary">Explore</a>
+      <a href="yaf.html" class="btn primary">Explore</a>
     </div>
 
     <div class="ministry-card">
       <img src="./images/wfs (1).png" alt="Women's Ministry Logo" class="ministry-logo">
       <h3>Women's Ministry</h3>
       <p>Empowering women to grow in faith and service.</p>
-      <a href="" class="btn primary">Explore</a>
+      <a href="women.html" class="btn primary">Explore</a>
     </div>
 
     <div class="ministry-card">
       <img src="./images/Mens Fellowship (1).png" alt="Men's Ministry Logo" class="ministry-logo">
       <h3>Men's Ministry</h3>
       <p>Equipping men to lead with faith and integrity.</p>
-      <a href="" class="btn primary">Explore</a>
+      <a href="men.html" class="btn primary">Explore</a>
     </div>
   </div>
 </section>
@@ -1839,7 +1869,7 @@
       </div>
       <h3>Singing Band</h3>
       <p>Leading worship through music and praise.</p>
-      <a href="#" class="btn primary">Explore</a>
+      <a href="singing_band.html" class="btn primary">Explore</a>
     </div>
 
     <div class="department-card">
@@ -1848,7 +1878,7 @@
       </div>
       <h3>Echoes of Trinity</h3>
       <p>Enriching worship with harmonies and melodies.</p>
-      <a href="#" class="btn primary">Explore</a>
+      <a href="eot.html" class="btn primary">Explore</a>
     </div>
 
     <div class="department-card">
@@ -1857,7 +1887,7 @@
       </div>
       <h3>Church Choir</h3>
       <p>Unifying voices to glorify God.</p>
-      <a href="#" class="btn primary">Explore</a>
+      <a href="church_choir.html" class="btn primary">Explore</a>
     </div>
 
     <div class="department-card">
@@ -1866,7 +1896,7 @@
       </div>
       <h3>Brigade</h3>
       <p>Maintaining order and discipline during church activities.</p>
-      <a href="#" class="btn primary">Explore</a>
+      <a href="brigade.html" class="btn primary">Explore</a>
     </div>
 
     <div class="department-card">
@@ -1875,16 +1905,7 @@
       </div>
       <h3>Bible Studies & Prayer Group</h3>
       <p>Deepening faith through study and prayer.</p>
-      <a href="#" class="btn primary">Explore</a>
-    </div>
-
-    <div class="department-card">
-      <div class="logo-wrapper">
-        <img src="./images/hgfc.jpg" alt="Holy Ghost Festival Committee Logo">
-      </div>
-      <h3>Holy Ghost Festival Committee</h3>
-      <p>Organizing annual celebrations to glorify God.</p>
-      <a href="#" class="btn primary">Explore</a>
+      <a href="bspg.html" class="btn primary">Explore</a>
     </div>
 
     <div class="department-card">
@@ -1893,7 +1914,7 @@
       </div>
       <h3>Ushering</h3>
       <p>Welcoming and assisting members during services.</p>
-      <a href="#" class="btn primary">Explore</a>
+      <a href="ushering.html" class="btn primary">Explore</a>
     </div>
 
     <div class="department-card">
@@ -1902,16 +1923,17 @@
       </div>
       <h3>Technical/Media</h3>
       <p>Managing sound, livestream, and digital content.</p>
-      <a href="#" class="btn primary">Explore</a>
+      <a href="media.html" class="btn primary">Explore</a>
     </div>
 
+    
     <div class="department-card">
       <div class="logo-wrapper">
-        <img src="./images/clerk-removebg-preview.png" alt="Welfare Logo">
+        <img src="./images/hgfc.jpg" alt="Holy Ghost Festival Committee Logo">
       </div>
-      <h3>Welfare</h3>
-      <p>Supporting church members with care and compassion.</p>
-      <a href="#" class="btn primary">Explore</a>
+      <h3>Holy Ghost Festival Committee</h3>
+      <p>Organizing annual celebrations to glorify God.</p>
+      <a href="hgfc.html" class="btn primary">Explore</a>
     </div>
 
   </div>
@@ -2059,7 +2081,7 @@
         Discover how faith can move mountains and transform your daily walk with Christ.
       </div>
       <div class="sermon-action">
-        <a href="#" class="btn primary">Watch</a>
+        <a href="sermons.html" class="btn primary">Watch</a>
       </div>
     </div>
 
@@ -2076,7 +2098,7 @@
         A deep dive into how prayer connects us with God and shapes our spiritual journey.
       </div>
       <div class="sermon-action">
-        <a href="#" class="btn primary">Watch</a>
+        <a href="sermons.html" class="btn primary">Watch</a>
       </div>
     </div>
 
@@ -2093,7 +2115,7 @@
         Uncover biblical principles for living a meaningful, purposeful Christian life.
       </div>
       <div class="sermon-action">
-        <a href="#" class="btn primary">Watch</a>
+        <a href="sermons.html" class="btn primary">Watch</a>
       </div>
     </div>
 

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sermons — PCG Trinity Congregation</title>
+<style>
+  :root {
+    --blue-900: #003366;
+    --blue-700: #00509e;
+    --gold: #f8b400;
+    --gold-soft: #ffd166;
+    --text-dark: #0f172a;
+    --text-light: #fff;
+  }
+
+  body {
+    font-family:'Inter', sans-serif;
+    margin:0;
+    background: linear-gradient(135deg, var(--blue-900), var(--blue-700));
+    color: var(--text-light);
+    line-height: 1.6;
+  }
+
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+
+  h1 { color: var(--gold); font-size:2rem; margin-bottom:12px; }
+  p.section-intro { margin-bottom:36px; color:rgba(255,255,255,0.85); }
+
+  /* SERMON CARD */
+  .sermon-card {
+    background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02));
+    border-radius: 16px;
+    padding:20px;
+    margin-bottom:20px;
+    transition: all 0.3s ease;
+    border:1px solid rgba(255,255,255,0.15);
+  }
+
+  .sermon-card:hover {
+    box-shadow: 0 10px 25px rgba(255,215,0,0.3);
+    transform: translateY(-3px);
+  }
+
+  .sermon-header {
+    display:flex;
+    align-items:center;
+    gap:16px;
+    flex-wrap:wrap;
+  }
+
+  .date-badge {
+    background: var(--gold);
+    color: var(--blue-900);
+    padding:10px 14px;
+    border-radius:12px;
+    text-align:center;
+    width:70px;
+    flex-shrink:0;
+  }
+  .date-badge .day { font-size:1.2rem; font-weight:700; display:block; }
+  .date-badge .month { font-size:0.9rem; text-transform:uppercase; display:block; }
+
+  .sermon-info h3 { margin:0 0 4px; color:var(--gold-soft); }
+  .sermon-info p { margin:0; font-size:0.95rem; color:rgba(255,255,255,0.85); }
+
+  .sermon-summary { margin-top:12px; color:rgba(255,255,255,0.85); }
+
+  .read-more {
+    margin-top:12px;
+    display:inline-block;
+    background: var(--gold-soft);
+    color: var(--blue-900);
+    padding:8px 16px;
+    border-radius:12px;
+    cursor:pointer;
+    font-weight:600;
+    text-decoration:none;
+    transition: 0.3s ease;
+  }
+  .read-more:hover { transform: scale(1.05); }
+
+  .sermon-details {
+    display:none;
+    margin-top:12px;
+    padding-top:12px;
+    border-top:1px solid rgba(255,255,255,0.15);
+    animation: fadeIn 0.5s ease forwards;
+  }
+
+  .sermon-details p { margin:8px 0; color:rgba(255,255,255,0.85); }
+
+  /* Bible Verse Box */
+  .verse {
+    background: rgba(255,215,0,0.1);
+    border-left: 4px solid var(--gold);
+    padding:8px 12px;
+    margin:8px 0;
+    border-radius:6px;
+    font-style:italic;
+    color: var(--gold-soft);
+  }
+
+  .sermon-details a {
+  color: #ffffff; /* white text */
+  text-decoration: underline;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.sermon-details a:hover {
+  color: var(--gold-soft); /* subtle gold highlight on hover */
+}
+
+.back-btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background: linear-gradient(90deg, #1fab89, #ffd166);
+  color: #001f3f;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.back-btn:hover {
+  transform: scale(1.05);
+}
+
+
+  /* Animations */
+  @keyframes fadeIn { from {opacity:0; transform:translateY(-10px);} to {opacity:1; transform:translateY(0);} }
+
+  /* Responsive */
+  @media(max-width:600px) {
+    .sermon-header { flex-direction: column; align-items:flex-start; }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Latest Sermons</h1>
+  <p class="section-intro">Feed your spirit and grow in faith with messages from our pulpit. Click "Read More" for full sermon details, quotations, and scripture references.</p>
+
+  <!-- Sermon Card Example -->
+  <div class="sermon-card">
+    <div class="sermon-header">
+      <div class="date-badge">
+        <span class="day">28</span>
+        <span class="month">SEP</span>
+      </div>
+      <div class="sermon-info">
+        <h3>Walking in Faith</h3>
+        <p>By Rev. John Doe</p>
+      </div>
+    </div>
+    <div class="sermon-summary">
+      Discover how faith can move mountains and transform your daily walk with Christ.
+    </div>
+    <a class="read-more">Read More</a>
+    <div class="sermon-details">
+      <p><strong>Full Summary:</strong> Faith is not just belief but action. This sermon explores practical steps to strengthen faith...</p>
+      <div class="verse">“If you have faith as small as a mustard seed, nothing will be impossible for you.” — Matthew 17:20</div>
+      <p><strong>Quotations Used:</strong> Hebrews 11:1, James 2:17</p>
+      <p><strong>Resources:</strong> <a href="#">Watch Video</a> | <a href="#">Download PDF</a></p>
+    </div>
+  </div>
+
+  <!-- Another Sermon Card -->
+  <div class="sermon-card">
+    <div class="sermon-header">
+      <div class="date-badge">
+        <span class="day">21</span>
+        <span class="month">SEP</span>
+      </div>
+      <div class="sermon-info">
+        <h3>The Power of Prayer</h3>
+        <p>By Rev. Jane Smith</p>
+      </div>
+    </div>
+    <div class="sermon-summary">
+      A deep dive into how prayer connects us with God and shapes our spiritual journey.
+    </div>
+    <a class="read-more">Read More</a>
+    <div class="sermon-details">
+      <p><strong>Full Summary:</strong> Prayer is our lifeline with God. This message teaches practical prayer methods and perseverance...</p>
+      <div class="verse">“Pray without ceasing.” — 1 Thessalonians 5:17</div>
+      <p><strong>Quotations Used:</strong> Philippians 4:6, Matthew 6:6</p>
+      <p><strong>Resources:</strong> <a href="#">Watch Video</a> | <a href="#">Download PDF</a></p>
+    </div>
+  </div>
+
+  <!-- Back Button -->
+<div style="text-align: center; margin: 40px 0;">
+  <a href="index.html" class="back-btn">Back to Home</a>
+</div>
+
+
+</div>
+
+<script>
+  // Accordion expand/collapse
+  document.querySelectorAll('.read-more').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      const details = btn.nextElementSibling;
+      details.style.display = details.style.display === 'block' ? 'none' : 'block';
+      btn.innerText = details.style.display === 'block' ? 'Show Less' : 'Read More';
+    });
+  });
+</script>
+
+</body>
+</html>

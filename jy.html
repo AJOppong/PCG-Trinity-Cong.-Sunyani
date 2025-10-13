@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Junior Youth (JY) - PCG Trinity</title>
+  <style>
+    /* ------------------ GLOBAL STYLES ------------------ */
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background-color: #001f3f;
+      color: #f8fafc;
+      line-height: 1.7;
+    }
+
+    h1, h2, h3 {
+      margin-top: 0;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* ------------------ HERO SECTION ------------------ */
+    .jy-hero {
+      position: relative;
+      height: 65vh;
+      background: url('./images/1746141876556.jpg') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+    }
+
+    .jy-hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to bottom right,
+        rgba(0, 47, 108, 0.3),
+        rgba(255, 209, 102, 0.25)
+      );
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 0 20px;
+      max-width: 800px;
+    }
+
+    .hero-content h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      color: #ffd166;
+      margin-bottom: 15px;
+    }
+
+    .hero-content p {
+      font-size: 1.2rem;
+      color: #e6f8f1;
+      font-style: italic;
+      margin-bottom: 10px;
+    }
+
+    .leader-quote {
+      font-size: 1rem;
+      font-weight: 500;
+      color: #fff;
+      margin-top: 10px;
+      background: rgba(0, 31, 63, 0.5);
+      display: inline-block;
+      padding: 8px 18px;
+      border-radius: 30px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    /* ------------------ MAIN CONTENT ------------------ */
+    .jy-content {
+      background: #001f3f;
+      padding: 70px 0;
+    }
+
+    .jy-content h2 {
+      color: #ffd166;
+      font-size: 1.8rem;
+      border-left: 6px solid #1fab89;
+      padding-left: 12px;
+      margin-top: 40px;
+      margin-bottom: 15px;
+    }
+
+    .jy-content h3 {
+      color: #ffd166;
+      margin-top: 30px;
+      margin-bottom: 10px;
+      font-size: 1.3rem;
+    }
+
+    .jy-content p {
+      margin-bottom: 20px;
+      text-align: justify;
+    }
+
+    .jy-content ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .jy-content ul li {
+      background: rgba(255, 209, 102, 0.1);
+      border-left: 4px solid #1fab89;
+      padding: 10px 15px;
+      margin-bottom: 8px;
+      border-radius: 8px;
+    }
+
+    /* ------------------ SLOGAN ------------------ */
+    .jy-slogan {
+      background: linear-gradient(135deg, #1fab89, #004466);
+      border-radius: 20px;
+      padding: 30px 25px;
+      margin: 50px 0;
+      text-align: center;
+      color: #fff;
+      box-shadow: 0 5px 20px rgba(31, 171, 137, 0.3);
+    }
+
+    .jy-slogan p {
+      margin: 8px 0;
+    }
+
+    /* ------------------ GALLERY ------------------ */
+    .jy-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 18px;
+      margin-top: 50px;
+    }
+
+    .jy-gallery img {
+      width: 100%;
+      height: 230px;
+      object-fit: cover;
+      border-radius: 18px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .jy-gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Back Button */
+    .back-btn {
+      display: inline-block;
+      margin: 60px auto;
+      padding: 12px 30px;
+      background: linear-gradient(90deg, #1fab89, #ffd166);
+      color: #001f3f;
+      border-radius: 30px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: transform 0.3s ease;
+    }
+
+    .back-btn:hover {
+      transform: scale(1.05);
+    }
+
+    /* ------------------ RESPONSIVE ------------------ */
+    @media (max-width: 768px) {
+      .hero-content h1 {
+        font-size: 2.2rem;
+      }
+
+      .hero-content p {
+        font-size: 1rem;
+      }
+
+      .jy-hero {
+        height: 55vh;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO SECTION -->
+  <section class="jy-hero">
+    <div class="hero-content">
+      <h1>Junior Youth (JY)</h1>
+      <p>“Youth for Jesus – Show yourself approved of God.”</p>
+      <span class="leader-quote">Building tomorrow’s disciples today.</span>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT -->
+  <section class="jy-content">
+    <div class="container">
+      <h2>About Junior Youth</h2>
+      <p>
+        The Junior Youth (JY) is made up of persons within the ages of twelve and eighteen. 
+        The Trinity Congregation JY started in xxxx with a total number of xx members. 
+        The group began its meetings during [insert details here].
+      </p>
+
+      <h3>Leaders</h3>
+      <ul>
+        <li>Kyere Amanfo</li>
+        <li>Gustus</li>
+        <li>Francis Sarfo</li>
+      </ul>
+
+      <h3>Meeting Days</h3>
+      <p><strong>Sundays:</strong> 8:00am – 11:00am</p>
+
+      <h3>Programmes & Activities</h3>
+      <p>
+        Activities of the group cut across several themes concentrating on spiritual, social, 
+        psychological, academic, emotional, and personal development of the individual.
+      </p>
+
+      <h3>How to Join</h3>
+      <p>
+        Anyone within the ages of twelve and eighteen is welcome to join the group. 
+        That person must make the commitment to attend JY services and thereafter 
+        acquire a booklet which is marked by the leaders on every meeting day.
+      </p>
+
+      <div class="jy-slogan">
+        <h3>Our Slogan</h3>
+        <p><strong>JY – Youth for Jesus</strong></p>
+        <p><em>Youth for Jesus – Show yourself approved of God.</em></p>
+      </div>
+
+      <div class="jy-gallery">
+        <img src="./images/download (6).png" alt="JY Activity">
+        <img src="./images/pwf-e1670896653631.png" alt="Junior Youth Group">
+        <img src="./images/FB_IMG_1746709066760.jpg" alt="JY Worship">
+      </div>
+
+      <div style="text-align:center;">
+        <a href="index.html" class="back-btn">← Back to Generational Groups</a>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

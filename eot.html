@@ -1,0 +1,161 @@
+<!-- ECHOES OF TRINITY PAGE -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Echoes of Trinity - PCG Trinity</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #0b1b3a;
+      --bg-neon: #1a2a5b;
+      --accent: #ffd166;
+      --text-light: #f5f5f5;
+      --text-accent: #ffda77;
+      --card-radius: 16px;
+      --max-width: 1100px;
+    }
+    * { box-sizing: border-box; margin:0; padding:0; }
+    body { font-family: 'Inter', sans-serif; background-color: var(--bg-dark); color: var(--text-light); line-height: 1.6; padding: 40px 20px; }
+    .container { max-width: var(--max-width); margin: 0 auto; }
+    h1, h2, h3 { margin-bottom: 12px; }
+    h1 { color: var(--accent); font-size: 2rem; text-align: center; margin-bottom: 20px; }
+    h2 { color: var(--text-accent); font-size: 1.5rem; margin-top: 20px; }
+    h3 { font-size: 1.25rem; color: var(--accent); }
+    p { margin-bottom: 12px; }
+    .logo { display: block; margin: 0 auto 20px; width: 180px; border-radius: var(--card-radius); }
+    .card { background-color: var(--bg-neon); padding: 25px; border-radius: var(--card-radius); margin-bottom: 25px; box-shadow: 0 8px 20px rgba(0,0,0,0.3); }
+    .leaders-list, .departments-list, .programs-list { list-style: none; padding-left: 0; }
+    .leaders-list li, .departments-list li, .programs-list li { margin-bottom: 8px; }
+    .back-btn { display: inline-block; margin-top: 30px; padding: 12px 24px; background-color: var(--accent); color: #0b1b3a; font-weight: 600; border-radius: 10px; text-decoration: none; transition: all 0.3s; }
+    .back-btn:hover { background-color: #ffda77; transform: translateY(-3px); }
+
+
+    /* Gallery Styling */
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 15px;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 14px;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #0d1a2a; /* dark bluish neon backdrop */
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1);
+}
+
+.gallery-item:hover {
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.6);
+  transform: translateY(-5px);
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Header / Name & Logo -->
+    <img src="./images/eot.jpg" alt="Echoes of Trinity Logo" class="logo">
+    <h1>Echoes of Trinity</h1>
+    <p style="text-align:center;font-style:italic;">"Enriching worship with contemporary harmonies and melodies."</p>
+
+    <!-- History -->
+    <div class="card">
+      <h2>History</h2>
+      <p>Echoes of Trinity was formed in 2010 as a contemporary choir to bring a modern worship experience to PCG Trinity. The choir has grown to include over 40 members, blending traditional and modern music to enhance congregational worship.</p>
+    </div>
+
+    <!-- What We Do -->
+    <div class="card">
+      <h2>What We Do</h2>
+      <p>The choir leads worship during Sunday services, special church events, and annual celebrations. They blend contemporary, gospel, and traditional songs to create an immersive worship experience. The choir also conducts workshops and training sessions for new members to develop musical skills and spiritual growth.</p>
+    </div>
+
+    <!-- Departments within -->
+    <div class="card">
+      <h2>Departments Within Echoes of Trinity</h2>
+      <ul class="departments-list">
+        <li>Vocal Team – Main singers and harmonizers.</li>
+        <li>Instrumental Team – Piano, guitar, drums, and percussion.</li>
+        <li>Audio & Sound Team – Manages sound and mixing for live services.</li>
+      </ul>
+    </div>
+
+    <!-- Leaders / Executives -->
+    <div class="card">
+      <h2>Leaders & Executives</h2>
+      <ul class="leaders-list">
+        <li>Minister-in-Charge: Rev. Benjamin Kwasi Ampofo</li>
+        <li>Choir Director: Mrs. Grace Opoku</li>
+        <li>Assistant Choir Director: Mr. Emmanuel Adu</li>
+        <li>Coordinator – Instrumental Team: Mr. Daniel Owusu</li>
+      </ul>
+    </div>
+
+    <!-- Programs & Activities -->
+    <div class="card">
+      <h2>Programs & Activities</h2>
+      <ul class="programs-list">
+        <li>Weekly rehearsals every Friday at 6:00 PM.</li>
+        <li>Special worship events for church festivals.</li>
+        <li>Annual musical outreach programs.</li>
+        <li>Workshops and training sessions for members.</li>
+      </ul>
+    </div>
+
+    <!-- Meeting Info -->
+    <div class="card">
+      <h2>Meeting Details</h2>
+      <p><strong>Day:</strong> Friday</p>
+      <p><strong>Time:</strong> 6:00 PM – 8:30 PM</p>
+      <p><strong>Venue:</strong> Church Main Hall</p>
+      <p><strong>Contact:</strong> echoes@pcgtrinity.org | +233 24 000 0000</p>
+    </div>
+
+    <!-- Slogan -->
+    <div class="card" style="text-align:center;">
+      <h2>Slogan</h2>
+      <p>"Where contemporary worship meets the heart of God."</p>
+    </div>
+
+    <!-- Gallery / Images -->
+<div class="card">
+  <h2>Gallery</h2>
+  <div class="gallery-container">
+    <div class="gallery-item">
+      <img src="./images/11 Closing Prayers For A Meeting - The Prayer Pocket.jpeg" alt="Echoes of Trinity Activity">
+    </div>
+    <div class="gallery-item">
+      <img src="./images/11 Closing Prayers For A Meeting - The Prayer Pocket.jpeg" alt="Echoes of Trinity Activity">
+    </div>
+    <div class="gallery-item">
+      <img src="./images/11 Closing Prayers For A Meeting - The Prayer Pocket.jpeg" alt="Echoes of Trinity Activity">
+    </div>
+    <div class="gallery-item">
+      <img src="./images/11 Closing Prayers For A Meeting - The Prayer Pocket.jpeg" alt="Echoes of Trinity Activity">
+    </div>
+  </div>
+</div>
+
+
+    <!-- Back Button -->
+    <a href="index.html" class="back-btn">Back to Home</a>
+  </div>
+</body>
+</html>

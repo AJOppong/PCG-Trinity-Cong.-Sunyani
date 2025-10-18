@@ -872,6 +872,39 @@
   transform: scale(1.05);
 }
 
+
+.department-card:last-child {
+  background: linear-gradient(145deg, #0a052a, #1a0e47, #002b5b);
+  color: #fff;
+  border: none;
+  box-shadow: 0 0 20px rgba(0, 0, 50, 0.4), 0 0 40px rgba(0, 100, 255, 0.25);
+  transform: scale(1.02);
+  transition: all 0.3s ease-in-out;
+}
+
+.department-card:last-child:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(0, 0, 80, 0.6), 0 0 60px rgba(0, 120, 255, 0.3);
+}
+
+.department-card:last-child h3 {
+  color: #00e5ff; /* subtle electric blue */
+}
+
+.department-card:last-child p {
+  color: #d8e6ff;
+}
+
+.department-card:last-child .btn.primary {
+  background: #00bcd4;
+  color: #fff;
+  border: none;
+}
+
+.department-card:last-child .btn.primary:hover {
+  background: #0097a7;
+}
+
 /* Subtle fade-in + pop animation */
 .department-card {
   opacity: 0;
@@ -1927,14 +1960,25 @@
     </div>
 
     
-    <div class="department-card">
+    <div class="department-card hgfc-card">
       <div class="logo-wrapper">
         <img src="./images/hgfc.jpg" alt="Holy Ghost Festival Committee Logo">
       </div>
       <h3>Holy Ghost Festival Committee</h3>
       <p>Organizing annual celebrations to glorify God.</p>
       <a href="hgfc.html" class="btn primary">Explore</a>
+      <style>
+        .department-card:last-child {
+          background: linear-gradient(135deg, #0a1028, #1c2541, #2b3a67);
+          color: #fff;
+          box-shadow: 0 0 20px rgba(0, 200, 255, 0.25);
+        }
+        .department-card:last-child h3 {
+          color: #00ffff;
+        }
+      </style>
     </div>
+
 
   </div>
 </section>

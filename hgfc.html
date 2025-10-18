@@ -3,63 +3,85 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Brigade - PCG Trinity</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Holy Ghost Festival Committee</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     body {
       font-family: 'Arial', sans-serif;
       margin: 0;
-      background: #0a0f1f;
+      background: linear-gradient(120deg, #0a0f1f, #1b2b3f, #203a4e);
       color: #fff;
     }
 
     .card {
-      background: #0c1525;
+      background: linear-gradient(145deg, #1e2b3d, #2a3c55);
       border-radius: 16px;
       padding: 30px;
       margin: 40px auto;
       max-width: 1000px;
-      box-shadow: 0 0 25px rgba(0, 255, 255, 0.2);
-    }
-
-    h1, h2, h3 {
-      color: #00ffff;
-      text-shadow: 0 0 8px rgba(0, 255, 255, 0.5);
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     }
 
     h1 {
       text-align: center;
       margin-bottom: 10px;
+      color: #00ffff;
     }
 
     .slogan {
       text-align: center;
       font-style: italic;
-      margin-bottom: 25px;
       color: #a0f0ff;
+      margin-bottom: 30px;
     }
 
     p {
       line-height: 1.6;
       margin-bottom: 20px;
+      color: #e4e4e4;
     }
 
     .section-title {
-      font-size: 1.4rem;
-      margin-bottom: 15px;
+      font-size: 1.3rem;
+      margin-bottom: 10px;
       border-bottom: 2px solid #00ffff;
       display: inline-block;
-      padding-bottom: 5px;
+      padding-bottom: 4px;
+      color: #00ffff;
     }
 
-    ul {
-      list-style-type: disc;
-      padding-left: 20px;
-      margin-bottom: 20px;
-    }
-
-    .gallery-section {
+    .leaders, .gallery {
       margin-top: 30px;
+    }
+
+    .leader-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .leader-card {
+      background: #243549;
+      border-radius: 12px;
+      padding: 15px;
+      text-align: center;
+    }
+
+    .leader-card img {
+      width: 100%;
+      height: 200px;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    .leader-card h4 {
+      margin: 10px 0 5px;
+      color: #00ffff;
+    }
+
+    .leader-card p {
+      font-size: 0.9rem;
+      color: #c9d7e3;
     }
 
     .gallery-container {
@@ -69,126 +91,201 @@
     }
 
     .gallery-item {
-      position: relative;
+      border-radius: 12px;
       overflow: hidden;
-      border-radius: 14px;
-      box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      background: #0d1a2a;
+      transition: transform 0.3s ease;
     }
 
     .gallery-item img {
       width: 100%;
-      height: 180px;
+      height: 220px; /* or whatever height fits your layout */
       object-fit: cover;
-      transition: transform 0.5s ease;
-    }
-
-    .gallery-item:hover img {
-      transform: scale(1.1);
+      object-position: top; /* focus on the top of the image where faces are */
+      border-radius: 12px;
+      transition: transform 0.3s ease;
     }
 
     .gallery-item:hover {
-      box-shadow: 0 0 25px rgba(0, 255, 255, 0.6);
-      transform: translateY(-5px);
+      transform: scale(1.03);
     }
 
-    .back-btn {
-      display: inline-block;
+    .socials {
+      text-align: center;
       margin-top: 30px;
-      padding: 12px 25px;
-      background: #00ffff;
-      color: #0a0f1f;
-      text-decoration: none;
-      border-radius: 8px;
+    }
+
+    .socials a {
+      color: #00ffff;
+      margin: 0 10px;
+      font-size: 1.8rem;
+      transition: color 0.3s ease;
+    }
+
+    .socials a:hover {
+      color: #00aaff;
+    }
+
+   .back-btn {
+      display: inline-block;
+      margin: 60px auto;
+      padding: 12px 30px;
+      background: linear-gradient(90deg, #1fab89, #ffd166);
+      color: #001f3f;
+      border-radius: 30px;
       font-weight: bold;
-      transition: background 0.3s ease;
+      text-decoration: none;
+      transition: transform 0.3s ease;
     }
 
     .back-btn:hover {
-      background: #00aaff;
+      transform: scale(1.05);
     }
   </style>
 </head>
 <body>
 
   <div class="card">
-    <h1>Brigade</h1>
-    <p class="slogan">“Order and Discipline in Service to God”</p>
+    <h1>Holy Ghost Festival Committee</h1>
+    <p class="slogan">"Reviving the Spirit, Celebrating His Presence"</p>
 
-    <!-- Short Note -->
-    <p>The Brigade is responsible for maintaining order and discipline during church services and events, ensuring smooth flow and assisting members as needed.</p>
+    <section>
+      <h2 class="section-title">About Us</h2>
+      <p>
+Once upon a time in the year 2015, some young vibrant leaders of a group
+called Young Peoples’ Guild in the Presbyterian Church of Ghana, Brong
+Ahafo Presbytery, Sunyani District, in a Congregation in Tonsuom Estate-
+Suburb of Sunyani, known as Trinity Congregation, met in Prayer and God
+spoke to them about the three (3) dispensations; God the Father, the Son and
+the Holy Spirit.<br><br>
+The team realized that in the era of God the father, they were not present and
+those that could not recognized the Son during His era too, they are not to
+blame but they’ve God all to do with the Holy Spirit in this generation.
+The team did not want to be in a dispensation and it be said about them that,
+‘The Holy Spirit came to His own and His own received Him not’ and hence
+He should be recognized, received, and celebrated in the beauty of his Holi-
+ness and his works for the world knows Him not but we know Him. (John
+14:17)<br><br>
+This caused the team to start a festival of the Spirit for the World to get to
+know Him, for Christians to accept His works and for the Chosen to celebrate
+Him in the program called “HOLY GHOST FESTIVAL”.<br><br>
+The first program was held in 3rd to 9th August 2015, with the late Rev. J. O.
+Ahinakwah as the host minister. The Spirit led us to strategize for the program
+never had been in the Presbyterian Church before in what was seen as ‘One
+night, One Minister’ where we paraded the teachers, Prophets, Apostles in the
+Church, not only Presbyterian Ministers but all ministers of the Word in the
+Church of Christ and it has been so till date.<br><br>
+      </p>
+    </section>
 
-    <!-- History Section -->
-    <h2 class="section-title">History</h2>
-    <p>Founded alongside the church’s early ministries, the Brigade has provided consistent support in organizing services, coordinating events, and maintaining decorum for over a decade.</p>
+    <section>
+      <h2 class="section-title">Mission & Vision</h2>
+      <p>Our purpose stems from the Mission and Vision of PCG but by extension, we
+      seek to
+      </p>
+      <ul>
+        <li>Outdoor the Holy Spirit,</li>
+        <li>Place emphasis on His Works</li>
+        <li>Bring the Body of Christ under the same umbrella,</li>
+        <li>Celebrate Him for who He is and</li>
+        <li>Revive the Church of God</li>
+        <li>In so doing, people will come to know Christ, and
+            the gifts and fruit of the Spirit will be made mani-
+            fest in their lives.
+        </li>
+        <p>This is re-living the upper room experience</p>
+      </ul>
+    </section>
 
-    <!-- What We Do Section -->
-    <h2 class="section-title">What We Do</h2>
-    <ul>
-      <li>Manage seating and ushering during church services.</li>
-      <li>Ensure smooth flow of events and activities.</li>
-      <li>Support special programs and large gatherings.</li>
-      <li>Train members in leadership, discipline, and teamwork.</li>
-    </ul>
-
-    <!-- Departments Within -->
-    <h2 class="section-title">Departments Within Us</h2>
-    <ul>
-      <li>Ushering Unit</li>
-      <li>Event Coordination Team</li>
-      <li>Training & Development Team</li>
-    </ul>
-
-    <!-- Leaders / Executives -->
-    <h2 class="section-title">Leaders / Executives</h2>
-    <ul>
-      <li>Brigade Commander: Rev. Kofi Mensah</li>
-      <li>Deputy Commander: Ama Serwaa</li>
-      <li>Coordinator: Kwame Ofori</li>
-      <li>Secretary: Abena Agyemang</li>
-    </ul>
-
-    <!-- Meetings -->
-    <h2 class="section-title">Meeting Details</h2>
-    <p><strong>Days:</strong> Mondays & Fridays</p>
-    <p><strong>Time:</strong> 4:00 PM – 6:00 PM</p>
-    <p><strong>Venue:</strong> Church Fellowship Hall</p>
-
-    <!-- Contact -->
-    <h2 class="section-title">Contact</h2>
-    <p>Email: brigade@pcgtrinity.org | Phone: +233 912 345 678</p>
-
-    <!-- Programs & Activities -->
-    <h2 class="section-title">Programs & Activities</h2>
-    <ul>
-      <li>Usher Training Workshops</li>
-      <li>Event Coordination for Church Programs</li>
-      <li>Security & Safety Drills</li>
-      <li>Support in Annual Church Events</li>
-    </ul>
-
-    <!-- Gallery -->
-    <div class="gallery-section">
-      <h2>Gallery</h2>
-      <div class="gallery-container">
-        <div class="gallery-item">
-          <img src="./images/11 Closing Prayers For A Meeting - The Prayer Pocket.jpeg" alt="Brigade in Service">
+    <section class="leaders">
+      <h2 class="section-title">Committee Members</h2>
+      <div class="leader-grid">
+        <div class="leader-card">
+          <img src="./images/sarfo.jpeg" alt="Leader">
+          <h4>Francis Sarfo Kwarteng</h4>
+          <p>Chairman</p>
         </div>
-        <div class="gallery-item">
-          <img src="./images/11 Closing Prayers For A Meeting - The Prayer Pocket.jpeg" alt="Brigade in Service">
+        <div class="leader-card">
+          <img src="./images/prof.jpeg" alt="Leader">
+          <h4>Proph. Kofi Boakye Fosuhene </h4>
+          <p>Patron</p>
         </div>
-        <div class="gallery-item">
-          <img src="./images/11 Closing Prayers For A Meeting - The Prayer Pocket.jpeg" alt="Brigade in Service">
+        <div class="leader-card">
+          <img src="./images/evangelist.jpeg" alt="Leader">
+          <h4>Evang. Alex Gyan Benneh</h4>
+          <p>Patron</p>
         </div>
-        <div class="gallery-item">
-          <img src="./images/11 Closing Prayers For A Meeting - The Prayer Pocket.jpeg" alt="Brigade in Service">
+        <div class="leader-card">
+          <img src="./images/kofi yeaboah.jpeg" alt="Leader">
+          <h4>Kofi Amankwaa Yeboah</h4>
+          <p>Team Member</p>
+        </div>
+        <div class="leader-card">
+          <img src="./images/paul.jpeg" alt="Leader">
+          <h4>Abisa Paul </h4>
+          <p>Team Member</p>
+        </div>
+        <div class="leader-card">
+          <img src="./images/eugene.jpeg" alt="Leader">
+          <h4>Eugene Gyeke</h4>
+          <p>Team Member</p>
+        </div>
+        <div class="leader-card">
+          <img src="./images/paakwesi.jpeg" alt="Leader">
+          <h4>Anthony Kwasi Boateng</h4>
+          <p>Team Member</p>
+        </div>
+        <div class="leader-card">
+          <img src="./images/alice.jpeg" alt="Leader">
+          <h4>Alice Amankeaa</h4>
+          <p>Team Member</p>
+        </div>
+        <div class="leader-card">
+          <img src="./images/amankwaa.jpeg" alt="Leader">
+          <h4>Kyere Amanfo</h4>
+          <p>Team Member</p>
+        </div>
+        <div class="leader-card">
+          <img src="./images/nii.jpeg" alt="Leader">
+          <h4>Joseph Nii Ahinakwah</h4>
+          <p>Team Member</p>
+        </div>
+        <div class="leader-card">
+          <img src="./images/felix.jpeg" alt="Leader">
+          <h4>Felix Nana Yaw Agyei</h4>
+          <p>Team Member</p>
         </div>
       </div>
-    </div>
+    </section>
 
-    <!-- Back Button -->
-    <a href="index.html" class="back-btn">Back to Home</a>
+    <section class="gallery">
+      <h2 class="section-title">Gallery</h2>
+      <div class="gallery-container">
+        <div class="gallery-item"><img src="./images/11 Closing Prayers For A Meeting - The Prayer Pocket.jpeg" alt="Event"></div>
+        <div class="gallery-item"><img src="./images/11 Closing Prayers For A Meeting - The Prayer Pocket.jpeg" alt="Event"></div>
+        <div class="gallery-item"><img src="./images/11 Closing Prayers For A Meeting - The Prayer Pocket.jpeg" alt="Event"></div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">Achievements</h2>
+      <ul>
+        <li>Hosted annual Holy Ghost Festivals since 2015</li>
+        <li>Draws thousands of believers yearly</li>
+        <li>Revival and outreach programs across the region</li>
+      </ul>
+    </section>
+
+    <section class="socials">
+      <h2 class="section-title">Follow Us</h2>
+      <div>
+        <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="#" title="TikTok"><i class="fab fa-tiktok"></i></a>
+        <a href="#" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </section>
+
+    <a href="index.html" class="back-btn">Back</a>
   </div>
 
 </body>

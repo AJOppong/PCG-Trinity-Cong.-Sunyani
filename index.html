@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PCG Trinity Congregation</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-pQZxgF0Xj7vX6FhKkO+YFq5Zl8KvgZpY7mkkVh7oP7+I3Zx3qg9e2k9RsmYp3PqX4eJ0m2NZWxkY2Kx9HqQF4g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+  
   <style>
     :root {
       --primary: #004080;
@@ -1661,6 +1661,65 @@
   transform: scale(1.05);
 }
 
+/* ==== SOCIALS SECTION ==== */
+/* ==== CONTACT SOCIALS ==== */
+.contact-socials {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.contact-socials h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.contact-socials .social-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.contact-socials .social-links a {
+  color: #333;
+  background: #fff;
+  font-size: 1.8rem;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+/* Hover brand colors */
+.contact-socials .social-links a[aria-label="Facebook"]:hover {
+  color: #fff;
+  background: #1877f2;
+}
+
+.contact-socials .social-links a[aria-label="YouTube"]:hover {
+  color: #fff;
+  background: #ff0000;
+}
+
+.contact-socials .social-links a[aria-label="TikTok"]:hover {
+  color: #fff;
+  background: #000000;
+}
+
+.contact-socials .social-links a[aria-label="WhatsApp"]:hover {
+  color: #fff;
+  background: #25d366;
+}
+
+.contact-socials .social-links a:hover {
+  transform: scale(1.1);
+}
+
+
 /* Responsive */
 @media (max-width: 1024px) {
   .contact-container { gap: 30px; }
@@ -2131,32 +2190,15 @@
 
     <div class="sermon-row">
       <div class="sermon-date-badge">
-        <span class="day">21</span>
-        <span class="month">SEP</span>
+        <span class="day">26</span>
+        <span class="month">OCT</span>
       </div>
       <div class="sermon-info">
-        <h3>The Power of Prayer</h3>
-        <p class="sermon-preacher">By Rev. Jane Smith</p>
+        <h3>Prayer Service</h3>
+        <p class="sermon-preacher">By Rev. Benjamin Ampofo</p>
       </div>
       <div class="sermon-desc">
         A deep dive into how prayer connects us with God and shapes our spiritual journey.
-      </div>
-      <div class="sermon-action">
-        <a href="sermons.html" class="btn primary">Watch</a>
-      </div>
-    </div>
-
-    <div class="sermon-row">
-      <div class="sermon-date-badge">
-        <span class="day">14</span>
-        <span class="month">SEP</span>
-      </div>
-      <div class="sermon-info">
-        <h3>Living with Purpose</h3>
-        <p class="sermon-preacher">By Rev. John Doe</p>
-      </div>
-      <div class="sermon-desc">
-        Uncover biblical principles for living a meaningful, purposeful Christian life.
       </div>
       <div class="sermon-action">
         <a href="sermons.html" class="btn primary">Watch</a>
@@ -2312,6 +2354,18 @@
         <button type="submit" class="btn primary">Send Message</button>
       </form>
     </div>
+
+    <!-- SOCIAL LINKS (inside contact section) -->
+<div class="contact-socials">
+  <h3>Connect With Us</h3>
+  <div class="social-links">
+    <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+    <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+    <a href="#" title="TikTok"><i class="fab fa-tiktok"></i></a>
+    <a href="#" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+  </div>
+</div>
+
 
     
   </div>

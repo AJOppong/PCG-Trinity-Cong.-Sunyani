@@ -952,6 +952,73 @@
   }
 }
 
+/* NNANNOM SECTION */
+.nnannom {
+  background: #f9f9f9;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.nnannom .section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.nnannom .section-subtitle {
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.group-photo img {
+  width: 100%;
+  max-width: 800px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 50px;
+}
+
+.nnannom-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.nnannom-card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  width: 280px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.nnannom-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.nnannom-card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.nnannom-card h3 {
+  color: #222;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.nnannom-card p {
+  color: #777;
+  font-size: 0.95rem;
+}
+
 
 /* SCHOLARSHIP SECTION (enhanced essay style) */
 .scholarship-section {
@@ -2134,6 +2201,37 @@
     <div class="department-card" onclick="openModal('publicity')">
       <h3>Publicity Committee</h3>
       <p>Handling communication, social media, and announcements.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Nnannom Section -->
+<section id="nnannom" class="nnannom">
+  <div class="container">
+    <h2 class="section-title">Nananom Fellowship</h2>
+    <p class="section-subtitle">Our respected chieftaincy rulers who play vital leadership roles in the church and community.</p>
+
+    <!-- Group Picture -->
+    <div class="group-photo">
+      <img src="images/nananom.jpg" alt="Nnannom Group Photo">
+    </div>
+
+    <!-- Individual Members -->
+    <div class="nnannom-grid">
+      <div class="nnannom-card">
+        <h3>Nana Kwame Mensah</h3>
+        <p>Chief of Tonso</p>
+      </div>
+
+      <div class="nnannom-card">
+        <h3>Nana Ama Serwaa</h3>
+        <p>Queen Mother</p>
+      </div>
+
+      <div class="nnannom-card">
+        <h3>Nana Kofi Boateng</h3>
+        <p>Elder Advisor</p>
+      </div>
     </div>
   </div>
 </section>
